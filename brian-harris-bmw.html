@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brian Harris BMW — Vendor & Services Summary</title>
+  <style>
+    :root {
+      --coop-dark: #0a0a0a;
+      --coop-red: #c0392b;
+      --coop-light: #f5f5f5;
+      --coop-white: #ffffff;
+      --coop-gray: #666666;
+      --coop-border: #e0e0e0;
+      --bmw-blue: #1c69d4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--coop-light);
+      color: var(--coop-dark);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    /* Header */
+    .header {
+      background: var(--coop-dark);
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid var(--coop-red);
+    }
+    .header img { height: 48px; }
+    .header-right { text-align: right; color: #aaa; font-size: 12px; }
+    .header-right strong { color: var(--coop-white); display: block; font-size: 14px; }
+    /* Store banner */
+    .store-banner {
+      background: var(--bmw-blue);
+      color: white;
+      padding: 20px 40px;
+    }
+    .store-banner h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+    .store-banner p { opacity: 0.85; font-size: 13px; margin-top: 4px; }
+    /* GM Card */
+    .gm-card {
+      background: white;
+      margin: 24px 40px 0;
+      border-radius: 8px;
+      padding: 20px 24px;
+      border-left: 4px solid var(--bmw-blue);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .gm-card h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--coop-gray); margin-bottom: 8px; }
+    .gm-card .gm-name { font-size: 20px; font-weight: 700; }
+    .gm-card .gm-contacts { margin-top: 8px; display: flex; gap: 20px; flex-wrap: wrap; }
+    .gm-card a { color: var(--bmw-blue); text-decoration: none; font-size: 13px; }
+    /* Section */
+    .section { margin: 24px 40px 0; }
+    .section h2 {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--coop-gray); margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--coop-border);
+    }
+    /* Table */
+    .vendor-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .vendor-table th {
+      background: var(--coop-dark); color: white;
+      padding: 10px 14px; text-align: left; font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+    }
+    .vendor-table td { padding: 12px 14px; border-bottom: 1px solid var(--coop-border); vertical-align: top; }
+    .vendor-table tr:last-child td { border-bottom: none; }
+    .vendor-table tr:hover td { background: #fafafa; }
+    .vendor-name { font-weight: 600; color: var(--coop-dark); }
+    .vendor-desc { color: var(--coop-gray); font-size: 12px; margin-top: 2px; }
+    .contact-links { display: flex; flex-direction: column; gap: 4px; }
+    .contact-links a { color: var(--bmw-blue); text-decoration: none; font-size: 12px; }
+    .contact-links a:hover { text-decoration: underline; }
+    .add-contact {
+      display: inline-block; margin-top: 4px;
+      background: var(--coop-dark); color: white !important;
+      padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+    }
+    .cost { font-weight: 600; color: var(--coop-dark); }
+    .cost-tbd { color: var(--coop-gray); font-style: italic; }
+    /* Spend summary */
+    .spend-grid {
+      background: white; border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+    .spend-row { display: flex; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--coop-border); }
+    .spend-row:last-child { border-bottom: none; background: var(--coop-dark); color: white; font-weight: 700; font-size: 15px; border-radius: 0 0 8px 8px; }
+    .spend-row.total { color: white; }
+    /* Emergency section */
+    .emergency-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .emergency-table th { background: var(--coop-red); color: white; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .emergency-table td { padding: 12px 14px; border-bottom: 1px solid var(--coop-border); }
+    .emergency-table tr:last-child td { border-bottom: none; }
+    .emergency-table a { color: var(--bmw-blue); text-decoration: none; }
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      background: var(--coop-dark);
+      border-top: 3px solid var(--coop-red);
+      padding: 32px 40px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .footer img { height: 36px; opacity: 0.9; }
+    .footer-text { color: #aaa; font-size: 12px; }
+    .footer-text strong { color: white; display: block; margin-bottom: 4px; }
+    .footer-text a { color: var(--coop-red); text-decoration: none; }
+    .footer-credit { color: #555; font-size: 11px; text-align: right; }
+    .footer-credit strong { color: #aaa; display: block; }
+    @media (max-width: 600px) {
+      .header, .store-banner, .gm-card, .section, .footer { padding-left: 16px; padding-right: 16px; }
+      .gm-card, .section { margin-left: 16px; margin-right: 16px; }
+      .header { flex-direction: column; gap: 12px; }
+      .footer { flex-direction: column; }
+      .vendor-table, .emergency-table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img src="https://raw.githubusercontent.com/thecooperativeagency/postengine/main/social-post-manager/public/coop-logo-white.png" alt="The Cooperative Agency" onerror="this.style.display='none'">
+  <div class="header-right">
+    <strong>Vendor & Services Summary</strong>
+    Prepared by The Cooperative Agency · April 2026
+  </div>
+</div>
+
+<!-- Store Banner -->
+<div class="store-banner">
+  <h1>Brian Harris BMW</h1>
+  <p>Baton Rouge, Louisiana · Brian Harris Automotive Group</p>
+</div>
+
+<!-- GM Card -->
+<div class="gm-card">
+  <h2>General Manager</h2>
+  <div class="gm-name">Brett Bagley</div>
+  <div class="gm-contacts">
+    <a href="tel:+12252762004">📞 (225) 276-2004</a>
+    <a href="mailto:Brett.Bagley@brianharrisbmw.com">✉️ Brett.Bagley@brianharrisbmw.com</a>
+  </div>
+</div>
+
+<!-- Core Systems -->
+<div class="section">
+  <h2>🖥️ Core Systems</h2>
+  <table class="vendor-table">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Vendor</th>
+        <th>Rep & Contact</th>
+        <th>Monthly Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="vendor-name">Dealer Management System</div><div class="vendor-desc">Core dealership ops — inventory, accounting, service</div></td>
+        <td>CDK Global</td>
+        <td><span class="contact-links"><span style="color:#999;font-size:12px">Rep TBD</span></span></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">CRM</div><div class="vendor-desc">Lead management, customer follow-up, sales pipeline</div></td>
+        <td>VinSolutions</td>
+        <td><div class="contact-links">
+          <strong>Royce Lee</strong>
+          <a href="tel:+13099978009">📞 (309) 997-8009</a>
+          <a href="vcards/royce-lee.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">CRM Marketing Automation</div><div class="vendor-desc">Automated email/text campaigns inside VinSolutions</div></td>
+        <td>AMP (VinSolutions)</td>
+        <td><div class="contact-links">
+          <strong>Katie Westerfield</strong>
+          <a href="tel:+17708830428">📞 (770) 883-0428</a>
+          <a href="vcards/katie-westerfield.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">Inventory Management</div><div class="vendor-desc">Trade appraisals, inventory pricing, market analysis</div></td>
+        <td>Vauto</td>
+        <td><div class="contact-links">
+          <strong>Dwayne Hearl</strong>
+          <a href="tel:+18132153632">📞 (813) 215-3632</a>
+          <a href="mailto:Dwayne.Hearl@coxautoinc.com">✉️ Dwayne.Hearl@coxautoinc.com</a>
+          <a href="vcards/dwayne-hearl.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Marketing -->
+<div class="section">
+  <h2>📢 Marketing & Advertising</h2>
+  <table class="vendor-table">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Vendor</th>
+        <th>Rep & Contact</th>
+        <th>Monthly Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="vendor-name">Dealership Website</div><div class="vendor-desc">Website platform and hosting</div></td>
+        <td>Motive</td>
+        <td><div class="contact-links">
+          <strong>Dessrae Edison</strong>
+          <a href="tel:+16015502972">📞 (601) 550-2972</a>
+          <a href="mailto:dessrae.edison@motivehq.com">✉️ dessrae.edison@motivehq.com</a>
+          <a href="vcards/dessrae-edison.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">Listings & Marketplace</div><div class="vendor-desc">Vehicle listings on Autotrader and Kelley Blue Book</div></td>
+        <td>Autotrader / KBB</td>
+        <td><div class="contact-links">
+          <strong>Josh Gwin</strong>
+          <a href="tel:+12259541627">📞 (225) 954-1627</a>
+          <a href="mailto:josh.gwin@autotrader.com">✉️ josh.gwin@autotrader.com</a>
+          <a href="vcards/josh-gwin.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">AI Chat / BDC / WebChat</div><div class="vendor-desc">AI-powered customer messaging, web chat, review management</div></td>
+        <td>Podium</td>
+        <td><div class="contact-links">
+          <strong>Tyler Barnes</strong>
+          <a href="tel:+13854856773">📞 (385) 485-6773</a>
+          <a href="mailto:tyler.barnes@podium.com">✉️ tyler.barnes@podium.com</a>
+          <a href="vcards/tyler-barnes.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">Direct Mail & Sales Events</div><div class="vendor-desc">Mailers, conquest campaigns, sales event marketing</div></td>
+        <td>J&L Marketing</td>
+        <td><div class="contact-links">
+          <strong>Michael Dorsey</strong> (Primary)
+          <a href="tel:+15137031151">📞 (513) 703-1151</a>
+          <a href="mailto:mdorsey@jandlmarketing.com">✉️ mdorsey@jandlmarketing.com</a>
+          <a href="vcards/michael-dorsey.vcf" class="add-contact">+ Add to Contacts</a>
+        </div></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+      <tr>
+        <td><div class="vendor-name">SEM / Google Ads</div><div class="vendor-desc">Paid search advertising</div></td>
+        <td>TBD</td>
+        <td><span style="color:#999;font-size:12px">TBD</span></td>
+        <td><span class="cost-tbd">TBD</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Social -->
+<div class="section">
+  <h2>📱 Social Media & Content</h2>
+  <table class="vendor-table">
+    <thead>
+      <tr><th>Service</th><th>Vendor</th><th>Contact</th><th>Monthly Cost</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><div class="vendor-name">Social Media Management</div><div class="vendor-desc">Content creation, scheduling, and publishing across all platforms</div></td>
+        <td>The Cooperative Agency</td>
+        <td><div class="contact-links">
+          <strong>Lance Faucheux</strong>
+          <a href="mailto:lance@thecoopbrla.com">✉️ lance@thecoopbrla.com</a>
+        </div></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Monthly Spend -->
+<div class="section">
+  <h2>💰 Monthly Spend Summary</h2>
+  <div class="spend-grid">
+    <div class="spend-row"><span>DMS (CDK Global)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>CRM (VinSolutions + AMP)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Inventory (Vauto)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Website (Motive)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Listings (Autotrader / KBB)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>AI Chat (Podium)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Direct Mail (J&L Marketing)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>SEM / Google Ads</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row total"><span>Estimated Monthly Total</span><span>TBD</span></div>
+  </div>
+</div>
+
+<!-- Emergency Contacts -->
+<div class="section" style="margin-bottom: 0;">
+  <h2>🚨 Who to Call When Something Breaks</h2>
+  <table class="emergency-table">
+    <thead>
+      <tr><th>Issue</th><th>Contact</th><th>Phone / Email</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Website is down</td><td>Dessrae Edison — Motive</td><td><a href="tel:+16015502972">(601) 550-2972</a></td></tr>
+      <tr><td>CRM not working</td><td>Royce Lee — VinSolutions</td><td><a href="tel:+13099978009">(309) 997-8009</a></td></tr>
+      <tr><td>Chat / AI not responding</td><td>Tyler Barnes — Podium</td><td><a href="tel:+13854856773">(385) 485-6773</a></td></tr>
+      <tr><td>Inventory pricing issues</td><td>Dwayne Hearl — Vauto</td><td><a href="tel:+18132153632">(813) 215-3632</a></td></tr>
+      <tr><td>Autotrader listing issues</td><td>Josh Gwin — Autotrader</td><td><a href="tel:+12259541627">(225) 954-1627</a></td></tr>
+      <tr><td>Direct mail / campaign issues</td><td>Michael Dorsey — J&L Marketing</td><td><a href="tel:+15137031151">(513) 703-1151</a></td></tr>
+      <tr><td>Social media / content</td><td>Lance Faucheux — The Cooperative Agency</td><td><a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <img src="https://raw.githubusercontent.com/thecooperativeagency/postengine/main/social-post-manager/public/coop-logo-white.png" alt="The Cooperative Agency" onerror="this.style.display='none'">
+  <div class="footer-text">
+    <strong>The Cooperative Agency</strong>
+    Baton Rouge, Louisiana<br>
+    <a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · <a href="http://www.thecoopbrla.com">thecoopbrla.com</a><br>
+    <a href="https://www.instagram.com/cooperativebrla/">@cooperativebrla</a>
+  </div>
+  <div class="footer-credit">
+    <strong>Lance Faucheux</strong>
+    Marketing Director<br>
+    Vendor summary prepared and maintained<br>
+    by The Cooperative Agency · April 2026
+  </div>
+</div>
+
+</body>
+</html>
