@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cooperative Agency — Command Center</title>
+  <style>
+    :root {
+      --dark: #0a0a0a;
+      --red: #c0392b;
+      --light: #f5f5f5;
+      --white: #ffffff;
+      --gray: #666;
+      --border: #e0e0e0;
+      --card-bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--dark);
+      color: var(--white);
+      min-height: 100vh;
+    }
+    .header {
+      background: var(--dark);
+      border-bottom: 3px solid var(--red);
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header img { height: 52px; }
+    .header-title { text-align: right; }
+    .header-title h1 { font-size: 20px; font-weight: 700; color: white; }
+    .header-title p { font-size: 12px; color: #666; margin-top: 4px; }
+    .main { max-width: 1100px; margin: 0 auto; padding: 40px; }
+    .section-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--red); font-weight: 700; margin-bottom: 16px; margin-top: 40px;
+    }
+    .section-label:first-child { margin-top: 0; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 20px;
+      text-decoration: none;
+      color: white;
+      transition: border-color 0.15s, background 0.15s;
+      display: block;
+    }
+    .card:hover { border-color: var(--red); background: #1a1a1a; }
+    .card-icon { font-size: 24px; margin-bottom: 10px; }
+    .card-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .card-desc { font-size: 12px; color: #666; line-height: 1.5; }
+    .card-tag {
+      display: inline-block; margin-top: 8px;
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 2px 8px; border-radius: 3px; font-weight: 600;
+    }
+    .tag-pages { background: #1a3a2a; color: #4caf7d; }
+    .tag-hosted { background: #1a2a3a; color: #4c8faf; }
+    .tag-internal { background: #2a1a3a; color: #9c7ddf; }
+    .divider { border: none; border-top: 1px solid #1a1a1a; margin: 8px 0; }
+    .footer {
+      border-top: 1px solid #1a1a1a;
+      padding: 24px 40px;
+      text-align: center;
+      color: #333;
+      font-size: 12px;
+      margin-top: 60px;
+    }
+    .footer a { color: var(--red); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="filter:brightness(0) invert(1);">
+  <div class="header-title">
+    <h1>Command Center</h1>
+    <p>Internal tools, dashboards & client pages</p>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Client Vendor Briefs -->
+  <div class="section-label">📋 Client Vendor Briefs</div>
+  <div class="grid">
+    <a href="brian-harris-bmw.html" class="card">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">Brian Harris BMW</div>
+      <div class="card-desc">Vendor & services summary · Brett Bagley</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+    <a href="audi-baton-rouge.html" class="card">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">Audi Baton Rouge</div>
+      <div class="card-desc">Vendor & services summary · Hedrick Wood</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+    <a href="bmw-of-jackson.html" class="card">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">BMW of Jackson</div>
+      <div class="card-desc">Vendor & services summary · Rick McCary</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+    <a href="harris-porsche.html" class="card">
+      <div class="card-icon">🚗</div>
+      <div class="card-title">Harris Porsche</div>
+      <div class="card-desc">Vendor & services summary · Adam Terrebonne</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+  </div>
+
+  <!-- GA4 Dashboards -->
+  <div class="section-label">📊 GA4 Analytics Dashboards</div>
+  <div class="grid">
+    <a href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-dashboard.html" class="card" target="_blank">
+      <div class="card-icon">📈</div>
+      <div class="card-title">BMW of Jackson — GA4</div>
+      <div class="card-desc">Traffic, engagement, YoY comparison</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+    <a href="https://thecooperativeagency.github.io/Ga4-dashboards/brian-harris-bmw-dashboard.html" class="card" target="_blank">
+      <div class="card-icon">📈</div>
+      <div class="card-title">Brian Harris BMW — GA4</div>
+      <div class="card-desc">Traffic, engagement, YoY comparison</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+    <a href="https://thecooperativeagency.github.io/Ga4-dashboards/audi-baton-rouge-dashboard.html" class="card" target="_blank">
+      <div class="card-icon">📈</div>
+      <div class="card-title">Audi Baton Rouge — GA4</div>
+      <div class="card-desc">Traffic, engagement, YoY comparison</div>
+      <span class="card-tag tag-pages">GitHub Pages</span>
+    </a>
+  </div>
+
+  <!-- Internal Tools -->
+  <div class="section-label">🛠️ Internal Tools</div>
+  <div class="grid">
+    <a href="http://localhost:3456" class="card" target="_blank">
+      <div class="card-icon">📬</div>
+      <div class="card-title">PostEngine</div>
+      <div class="card-desc">Social post manager — draft, approve, publish</div>
+      <span class="card-tag tag-hosted">Local · Port 3456</span>
+    </a>
+    <a href="http://localhost:3200" class="card" target="_blank">
+      <div class="card-icon">📉</div>
+      <div class="card-title">Kalshi Dashboard</div>
+      <div class="card-desc">Weather trading positions, arb scanner</div>
+      <span class="card-tag tag-hosted">Local · Port 3200</span>
+    </a>
+    <a href="https://todoist.com/app" class="card" target="_blank">
+      <div class="card-icon">✅</div>
+      <div class="card-title">Todoist</div>
+      <div class="card-desc">Task management — all open commitments</div>
+      <span class="card-tag tag-hosted">Web App</span>
+    </a>
+  </div>
+
+  <!-- GitHub Repos -->
+  <div class="section-label">💾 GitHub Repositories</div>
+  <div class="grid">
+    <a href="https://github.com/thecooperativeagency/vendor-briefs" class="card" target="_blank">
+      <div class="card-icon">📁</div>
+      <div class="card-title">vendor-briefs</div>
+      <div class="card-desc">Client-facing vendor summaries + vCards</div>
+      <span class="card-tag tag-internal">GitHub</span>
+    </a>
+    <a href="https://github.com/thecooperativeagency/Ga4-dashboards" class="card" target="_blank">
+      <div class="card-icon">📁</div>
+      <div class="card-title">Ga4-dashboards</div>
+      <div class="card-desc">GA4 analytics dashboards for all stores</div>
+      <span class="card-tag tag-internal">GitHub</span>
+    </a>
+    <a href="https://github.com/thecooperativeagency/postengine" class="card" target="_blank">
+      <div class="card-icon">📁</div>
+      <div class="card-title">postengine</div>
+      <div class="card-desc">Social post manager source code</div>
+      <span class="card-tag tag-internal">GitHub</span>
+    </a>
+  </div>
+
+</div>
+
+<div class="footer">
+  The Cooperative Agency · <a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · <a href="http://www.thecoopbrla.com">thecoopbrla.com</a>
+</div>
+
+</body>
+</html>
