@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW of Jackson — Vendor & Services Summary</title>
+  <style>
+    :root { --coop-dark: #0a0a0a; --coop-red: #c0392b; --coop-light: #f5f5f5; --coop-white: #ffffff; --coop-gray: #666666; --coop-border: #e0e0e0; --brand: #1c69d4; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--coop-light); color: var(--coop-dark); font-size: 14px; line-height: 1.6; }
+    .header { background: var(--coop-dark); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--coop-red); }
+    .header img { height: 48px; }
+    .header-right { text-align: right; color: #aaa; font-size: 12px; }
+    .header-right strong { color: var(--coop-white); display: block; font-size: 14px; }
+    .store-banner { background: var(--brand); color: white; padding: 20px 40px; }
+    .store-banner h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+    .store-banner p { opacity: 0.85; font-size: 13px; margin-top: 4px; }
+    .gm-card { background: white; margin: 24px 40px 0; border-radius: 8px; padding: 20px 24px; border-left: 4px solid var(--brand); box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .gm-card h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--coop-gray); margin-bottom: 8px; }
+    .gm-card .gm-name { font-size: 20px; font-weight: 700; }
+    .gm-card .gm-contacts { margin-top: 8px; display: flex; gap: 20px; flex-wrap: wrap; }
+    .gm-card a { color: var(--brand); text-decoration: none; font-size: 13px; }
+    .section { margin: 24px 40px 0; }
+    .section h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--coop-gray); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--coop-border); }
+    .vendor-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .vendor-table th { background: var(--coop-dark); color: white; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+    .vendor-table td { padding: 12px 14px; border-bottom: 1px solid var(--coop-border); vertical-align: top; }
+    .vendor-table tr:last-child td { border-bottom: none; }
+    .vendor-table tr:hover td { background: #fafafa; }
+    .vendor-name { font-weight: 600; }
+    .vendor-desc { color: var(--coop-gray); font-size: 12px; margin-top: 2px; }
+    .contact-links { display: flex; flex-direction: column; gap: 4px; }
+    .contact-links a { color: var(--brand); text-decoration: none; font-size: 12px; }
+    .add-contact { display: inline-block; margin-top: 4px; background: var(--coop-dark); color: white !important; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .cost-tbd { color: var(--coop-gray); font-style: italic; }
+    .cost { font-weight: 600; }
+    .spend-grid { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .spend-row { display: flex; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--coop-border); }
+    .spend-row.total { border-bottom: none; background: var(--coop-dark); color: white; font-weight: 700; font-size: 15px; border-radius: 0 0 8px 8px; }
+    .emergency-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .emergency-table th { background: var(--coop-red); color: white; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .emergency-table td { padding: 12px 14px; border-bottom: 1px solid var(--coop-border); }
+    .emergency-table tr:last-child td { border-bottom: none; }
+    .emergency-table a { color: var(--brand); text-decoration: none; }
+    .footer { margin-top: 40px; background: var(--coop-dark); border-top: 3px solid var(--coop-red); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+    .footer img { height: 36px; opacity: 0.9; }
+    .footer-text { color: #aaa; font-size: 12px; }
+    .footer-text strong { color: white; display: block; margin-bottom: 4px; }
+    .footer-text a { color: var(--coop-red); text-decoration: none; }
+    .footer-credit { color: #555; font-size: 11px; text-align: right; }
+    .footer-credit strong { color: #aaa; display: block; }
+  </style>
+</head>
+<body>
+<div class="header">
+  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="filter:brightness(0) invert(1); height:40px;">
+  <div class="header-right"><strong>Vendor & Services Summary</strong>Prepared by The Cooperative Agency · April 2026</div>
+</div>
+<div class="store-banner"><h1>BMW of Jackson</h1><p>Jackson, Mississippi · Herrin-Gear Automotive Group</p></div>
+<div class="gm-card">
+  <h2>General Manager</h2>
+  <div class="gm-name">Rick McCary</div>
+  <div class="gm-contacts">
+    <a href="tel:+16012785340">📞 (601) 278-5340</a>
+    <a href="mailto:rick.mccary@herrin-gear.com">✉️ rick.mccary@herrin-gear.com</a>
+  </div>
+</div>
+<div class="section">
+  <h2>🖥️ Core Systems</h2>
+  <table class="vendor-table">
+    <thead><tr><th>Service</th><th>Vendor</th><th>Rep & Contact</th><th>Monthly Cost</th></tr></thead>
+    <tbody>
+      <tr><td><div class="vendor-name">Dealer Management System</div><div class="vendor-desc">Core dealership ops — inventory, accounting, service</div></td><td>Reynolds & Reynolds</td><td><span style="color:#999;font-size:12px">Rep TBD</span></td><td><span class="cost-tbd">TBD</span></td></tr>
+      <tr><td><div class="vendor-name">CRM</div><div class="vendor-desc">Lead management, customer follow-up, sales pipeline</div></td><td>Reynolds & Reynolds</td><td><span style="color:#999;font-size:12px">Rep TBD</span></td><td><span class="cost-tbd">TBD</span></td></tr>
+      <tr><td><div class="vendor-name">Inventory Management</div><div class="vendor-desc">Trade appraisals, inventory pricing, market analysis</div></td><td>Vauto</td><td><div class="contact-links"><strong>Clay Doyle</strong><a href="tel:+12706121287">📞 (270) 612-1287</a><a href="vcards/clay-doyle.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="section">
+  <h2>📢 Marketing & Advertising</h2>
+  <table class="vendor-table">
+    <thead><tr><th>Service</th><th>Vendor</th><th>Rep & Contact</th><th>Monthly Cost</th></tr></thead>
+    <tbody>
+      <tr><td><div class="vendor-name">Dealership Website</div><div class="vendor-desc">Website platform and hosting</div></td><td>Motive</td><td><div class="contact-links"><strong>Dessrae Edison</strong><a href="tel:+16015502972">📞 (601) 550-2972</a><a href="mailto:dessrae.edison@motivehq.com">✉️ dessrae.edison@motivehq.com</a><a href="vcards/dessrae-edison.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
+      <tr><td><div class="vendor-name">Listings & Marketplace</div><div class="vendor-desc">Vehicle listings on Autotrader and Kelley Blue Book</div></td><td>Autotrader / KBB</td><td><div class="contact-links"><strong>Steven Nini</strong><a href="tel:+16019961277">📞 (601) 996-1277</a><a href="mailto:steven.nini@coxautoinc.com">✉️ steven.nini@coxautoinc.com</a><a href="vcards/steven-nini.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
+      <tr><td><div class="vendor-name">AI Chat / BDC / WebChat</div><div class="vendor-desc">AI-powered customer messaging, web chat, review management</div></td><td>Podium</td><td><div class="contact-links"><strong>Tyler Barnes</strong><a href="tel:+13854856773">📞 (385) 485-6773</a><a href="mailto:tyler.barnes@podium.com">✉️ tyler.barnes@podium.com</a><a href="vcards/tyler-barnes.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
+      <tr><td><div class="vendor-name">Digital Marketing / BMW OEM</div><div class="vendor-desc">BMW OEM co-op digital advertising and data programs</div></td><td>Epsilon</td><td><div class="contact-links"><strong>Adam Nicholas</strong><a href="tel:+12135090888">📞 (213) 509-0888</a><a href="mailto:Adam.Nicholas@epsilon.com">✉️ Adam.Nicholas@epsilon.com</a><a href="vcards/adam-nicholas.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
+<tr><td><div class="vendor-name">Google Ads &amp; Meta Advertising</div><div class="vendor-desc">Google Ads &amp; Meta (Facebook/Instagram) managed by J&amp;L Marketing</div></td><td>J&amp;L Marketing</td><td><div class="contact-links"><strong>Michael Dorsey</strong><a href="tel:+15137031151">📞 (513) 703-1151</a><a href="mailto:mdorsey@jandlmarketing.com">✉️ mdorsey@jandlmarketing.com</a></div></td><td><span class="cost">~$8,000/mo</span></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="section">
+  <h2>📱 Social Media & Content</h2>
+  <table class="vendor-table">
+    <thead><tr><th>Service</th><th>Vendor</th><th>Contact</th><th>Monthly Cost</th></tr></thead>
+    <tbody><tr><td><div class="vendor-name">Social Media Management</div><div class="vendor-desc">Content creation, scheduling, and publishing across all platforms</div></td><td>The Cooperative Agency</td><td><div class="contact-links"><strong>Lance Faucheux</strong><a href="mailto:lance@thecoopbrla.com">✉️ lance@thecoopbrla.com</a></div></td><td>—</td></tr></tbody>
+  </table>
+</div>
+<div class="section">
+  <h2>💰 Monthly Spend Summary</h2>
+  <div class="spend-grid">
+    <div class="spend-row"><span>DMS / CRM (Reynolds & Reynolds)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Inventory (Vauto)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Website (Motive)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Listings (Autotrader / KBB)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>AI Chat (Podium)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Digital Marketing (Epsilon)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Direct Mail (J&L Marketing)</span><span class="cost-tbd">TBD</span></div>
+    <div class="spend-row"><span>Google Ads &amp; Meta Advertising</span><span class="cost">~$8,000</span></div>
+    <div class="spend-row total"><span>Estimated Monthly Total</span><span>TBD</span></div>
+  </div>
+</div>
+<div class="section" style="margin-bottom: 0;">
+  <h2>🚨 Vendor Contacts — If Lance Is Unavailable</h2>
+  <p style="font-size:13px;color:#666;margin-bottom:12px;">For any vendor issue, <strong>text Lance Faucheux first</strong> — <a href="sms:+12254398920" style="color:#c0392b;">(225) 439-8920</a>. Do not email — texts get a same-day response, emails may not. The contacts below are direct vendor lines for when Lance is on vacation or unreachable.</p>
+  <table class="emergency-table">
+    <thead><tr><th>Issue</th><th>Contact Lance First: lance@thecoopbrla.com</th><th>Direct Vendor Contact (Backup)</th></tr></thead>
+    <tbody>
+      <tr><td>Website is down</td><td>Dessrae Edison — Motive</td><td><a href="tel:+16015502972">(601) 550-2972</a></td></tr>
+      <tr><td>CRM not working</td><td>Reynolds & Reynolds Support</td><td>TBD</td></tr>
+      <tr><td>Chat / AI not responding</td><td>Tyler Barnes — Podium</td><td><a href="tel:+13854856773">(385) 485-6773</a></td></tr>
+      <tr><td>Inventory pricing issues</td><td>Clay Doyle — Vauto</td><td><a href="tel:+12706121287">(270) 612-1287</a></td></tr>
+      <tr><td>Autotrader listing issues</td><td>Steven Nini — Autotrader</td><td><a href="tel:+16019961277">(601) 996-1277</a></td></tr>
+      <tr><td>Digital marketing (Epsilon)</td><td>Adam Nicholas — Epsilon</td><td><a href="tel:+12135090888">(213) 509-0888</a></td></tr>
+      <tr><td>Social media / content</td><td>Lance Faucheux — The Cooperative Agency</td><td><a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="footer">
+  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="filter:brightness(0) invert(1); height:40px;">
+  <div class="footer-text"><strong>The Cooperative Agency</strong>Baton Rouge, Louisiana<br><a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · <a href="http://www.thecoopbrla.com">thecoopbrla.com</a><br><a href="https://www.instagram.com/cooperativebrla/">@cooperativebrla</a></div>
+  <div class="footer-credit"><strong>Lance Faucheux</strong>Marketing Director<br>Vendor summary prepared and maintained<br>by The Cooperative Agency · April 2026</div>
+</div>
+</body>
+</html>
