@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-default-theme="dark" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Audi Baton Rouge — Meeting Summary April 13, 2026</title>
+  <style>
+    :root { --dark: #000000; --red: #BB0A21; --brand: #BB0A21; --light: #111111; --border: #333333; --gray: #888; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--light); color: #e0e0e0; font-size: 14px; line-height: 1.6; }
+    .header { background: var(--dark); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--red); }
+    .header img { height: 48px; }
+    .header-right { text-align: right; color: #888; font-size: 12px; }
+    .header-right strong { color: white; display: block; font-size: 14px; }
+    .back { background: #0a0a0a; padding: 10px 40px; border-bottom: 1px solid #222; }
+    .back a { color: var(--red); text-decoration: none; font-size: 12px; font-weight: 600; }
+    .store-banner { background: #1a1a1a; color: white; padding: 20px 40px; }
+    .store-banner h1 { font-size: 22px; font-weight: 700; }
+    .store-banner p { opacity: 0.8; font-size: 13px; margin-top: 4px; }
+    .main { max-width: 900px; margin: 0 auto; padding: 32px 40px; }
+    .meta { background: #1a1a1a; border-radius: 8px; padding: 20px 24px; border-left: 4px solid var(--brand); box-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 24px; display: flex; gap: 40px; flex-wrap: wrap; }
+    .meta-item label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); display: block; margin-bottom: 4px; }
+    .meta-item strong { font-size: 14px; color: #fff; }
+    .section { margin-bottom: 28px; }
+    .section h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .card { background: #1a1a1a; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 12px; }
+    .decision { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .decision:last-child { border-bottom: none; }
+    .decision-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .decision-text { font-size: 14px; color: #ccc; }
+    .decision-text strong { display: block; margin-bottom: 2px; color: #fff; }
+    .decision-text span { color: var(--gray); font-size: 12px; }
+    .task-row { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .task-row:last-child { border-bottom: none; }
+    .task-owner { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 3px; flex-shrink: 0; }
+    .owner-store { background: #333; color: #fff; }
+    .owner-lance { background: #4a050c; color: #ff9999; }
+    .task-text { font-size: 13px; color: #ccc; }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .metric-card { background: #1a1a1a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.3); text-align: center; }
+    .metric-card .number { font-size: 24px; font-weight: 700; color: var(--brand); }
+    .metric-card .label { font-size: 10px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+    .metric-card .delta { font-size: 11px; font-weight: 600; margin-top: 4px; }
+    .up { color: #22c55e; }
+    .down { color: #ef4444; }
+    .footer { margin-top: 40px; background: var(--dark); border-top: 3px solid var(--red); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer img { height: 32px; opacity: 0.9; }
+    .footer-text { color: #888; font-size: 12px; }
+    .footer-text strong { color: white; display: block; }
+    .footer-text a { color: var(--red); text-decoration: none; }
+
+    /* Light mode support */
+    [data-theme="light"] body { background: #f5f5f5 !important; color: #0a0a0a !important; }
+    [data-theme="light"] .header { background: #0a0a0a !important; }
+    [data-theme="light"] .meta { background: white !important; box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+    [data-theme="light"] .meta-item strong { color: #000 !important; }
+    [data-theme="light"] .card { background: white !important; box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+    [data-theme="light"] .decision-text { color: #444 !important; }
+    [data-theme="light"] .decision-text strong { color: #000 !important; }
+    [data-theme="light"] .task-text { color: #444 !important; }
+    [data-theme="light"] .metric-card { background: white !important; box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+    [data-theme="light"] .section h2 { border-bottom-color: #e0e0e0 !important; }
+    [data-theme="light"] .decision { border-bottom-color: #e0e0e0 !important; }
+    [data-theme="light"] .task-row { border-bottom-color: #e0e0e0 !important; }
+  </style>
+</head>
+<body>
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode" style="position:fixed;top:14px;right:18px;z-index:9999;background:rgba(128,128,128,0.15);border:1px solid rgba(128,128,128,0.3);border-radius:20px;padding:6px 12px;font-size:16px;cursor:pointer;backdrop-filter:blur(6px);transition:background 0.2s,border-color 0.2s;" aria-label="Toggle theme">☀️</button>
+
+<div class="header">
+  <img src="../abr-logo.png" alt="Audi Baton Rouge" style="filter: brightness(0) invert(1);">
+  <div class="header-right"><strong>Meeting Summary</strong>Prepared by The Cooperative Agency</div>
+</div>
+
+<div class="back"><a href="../audi-baton-rouge.html">← Back to Audi Baton Rouge Vendor Brief</a></div>
+
+<div class="store-banner">
+  <h1>Audi Baton Rouge — Monthly Strategy Meeting</h1>
+  <p>April 13, 2026 &nbsp;·&nbsp; Sales Performance, Video Strategy &amp; Inventory Controls</p>
+</div>
+
+<div class="main">
+
+  <div class="meta">
+    <div class="meta-item"><label>Date</label><strong>April 13, 2026</strong></div>
+    <div class="meta-item"><label>Attendees</label><strong>Lance Faucheux, GM Hedrick Wood, Service Mgr, Parts Mgr</strong></div>
+    <div class="meta-item"><label>Topic</label><strong>Sales vs Service Performance, Q5 Launch, Video</strong></div>
+    <div class="meta-item"><label>Status</label><strong>Action Items in Progress</strong></div>
+  </div>
+
+  <!-- Performance -->
+  <div class="section">
+    <h2>📊 Month-to-Date Performance vs. March Pace</h2>
+    <div class="metric-grid">
+      <div class="metric-card"><div class="number">$51,225</div><div class="label">Sales Gross</div><div class="delta down">↓ -$49k Pace</div></div>
+      <div class="metric-card"><div class="number">$82,860</div><div class="label">Service Gross</div><div class="delta up">↑ +$15k Pace</div></div>
+      <div class="metric-card"><div class="number">$37,032</div><div class="label">Parts Gross</div><div class="delta up">↑ +$5k Pace</div></div>
+      <div class="metric-card"><div class="number">43%</div><div class="label">Bounce Rate</div><div class="delta up">↑ Under 60% Goal</div></div>
+    </div>
+    <div class="card" style="margin-top:12px; color:#aaa; font-size:13px;">
+      📉 <strong>Sales is stalling, but fixed ops is carrying the store.</strong> Combined total is down ~$29k vs March pace. Traffic is very good, but leads/walk-ins aren't converting due to interest rates and economic pressure. Middle segment is shifting to sedans/VW for lower rates.
+    </div>
+  </div>
+
+  <!-- Key Decisions & Topics -->
+  <div class="section">
+    <h2>✅ Key Discussion Points</h2>
+    <div class="card">
+      <div class="decision">
+        <div class="decision-icon">📉</div>
+        <div class="decision-text"><strong>Shift to Rate-Driven Campaigns</strong><span>Rate is the #1 driver. Stop lease bragging and pivot to "Buy-Down" rate education (e.g. 1.9% bought to 0.9%). Market the new Q5/Q3 as "ALL NEW" models.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">📽️</div>
+        <div class="decision-text"><strong>Launch New Video Strategy</strong><span>New videographer starts this week. Focus on humanizing the team. Use Podium for quick vehicle walkthrough videos sent directly to AI chat leads.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🌐</div>
+        <div class="decision-text"><strong>Optimize Inventory Display</strong><span>Fix CDK/OMD sync issue. Keep "Sold" cars visible in OMD only to maintain site volume and show "Reserved" status for white/beige Q5s.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🔧</div>
+        <div class="decision-text"><strong>Warranty Labor Audit</strong><span>Service hours are strong (3.0 per RO customer pay), but warranty is lagging. Compare warranty claim types with other stores to find missed labor ops.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🚗</div>
+        <div class="decision-text"><strong>Front Plate Removal</strong><span>Remove front license plate brackets from all new Q5s arriving. Install filler plugs (filler plates) instead for a cleaner look.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Items -->
+  <div class="section">
+    <h2>📌 Action Items</h2>
+    <div class="card">
+      <div class="task-row">
+        <span class="task-owner owner-lance">Lance</span>
+        <span class="task-text">Build new Q5 feature page (similar to Q3 page) and coordinate photos for Black Optic Q5s</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-lance">Lance</span>
+        <span class="task-text">Audit CDK vs OMD sync — trace specific stock numbers for white/beige Q5s to fix visibility issues</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-store">Store</span>
+        <span class="task-text">Service Mgr: Reach out to other managers to compare warranty claim types/labor ops</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-store">Store</span>
+        <span class="task-text">Sales Team: Train on Podium video send workflow for new leads before adding Flick Fusion</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-store">Store</span>
+        <span class="task-text">Parts/Service: Order filler plugs/plates for new Q5s and remove front brackets</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-store">Store</span>
+        <span class="task-text">Service Advisor: Remind staff that keys MUST go in the box over the weekend (no desk storage)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Strategy Notes -->
+  <div class="section">
+    <h2>🧠 Strategy Notes</h2>
+    <div class="card" style="font-size:13px; color:#aaa; line-height:1.8;">
+      <p><strong>Differentiation is the challenge.</strong> All Audi websites look the same right now. We must differentiate on <em>message</em> (rate buy-downs) and <em>humanity</em> (staff videos). If the car and the site are the same, the customer just shops on price.</p>
+      <br>
+      <p><strong>The "Reserved" trick.</strong> Keeping sold inventory on the site as "Reserved" instead of removing it immediately helps maintain search volume and shows the market is moving, even if the specific car isn't available.</p>
+      <br>
+      <p><strong>Fixed Ops is the engine.</strong> With service gross up $15k and parts up $5k, the store is healthy despite a slow sales month. Focus on capturing every possible warranty hour to close the gap on lagging stores.</p>
+      <br>
+      <p><strong>Vendor Redundancy.</strong> Flick Fusion for video follow-up is likely redundant if we actually use the tools already built into Podium. Train staff on the current stack before adding more software overhead.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <img src="../coop-logo.jpg" alt="The Cooperative Agency" style="filter:brightness(0) invert(1);">
+  <div class="footer-text">
+    <strong>The Cooperative Agency</strong>
+    <a href="sms:+12252765682">Text (225) 276-5682</a> · <a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · <a href="http://www.thecoopbrla.com">thecoopbrla.com</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var saved = localStorage.getItem('theme');
+  if(saved) document.documentElement.setAttribute('data-theme', saved);
+  else document.documentElement.setAttribute('data-theme', 'dark');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  var cur = el.getAttribute('data-theme');
+  var next = cur === 'dark' ? 'light' : 'dark';
+  el.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  document.getElementById('theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var t = document.documentElement.getAttribute('data-theme');
+  var btn = document.getElementById('theme-toggle');
+  if(btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+});
+</script>
+</body>
+</html>
