@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" data-default-theme="dark" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Harris Porsche — Meeting Summary April 1, 2026</title>
+  <style>
+    :root { --dark: #000000; --maroon: #6B2737; --brand: #6B2737; --light: #111111; --border: #333333; --gray: #888; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--light); color: #e0e0e0; font-size: 14px; line-height: 1.6; }
+    .header { background: var(--dark); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--maroon); }
+    .header img { height: 48px; }
+    .header-right { text-align: right; color: #888; font-size: 12px; }
+    .header-right strong { color: white; display: block; font-size: 14px; }
+    .store-banner { background: #1a1a1a; color: white; padding: 20px 40px; }
+    .store-banner h1 { font-size: 22px; font-weight: 700; }
+    .store-banner p { opacity: 0.8; font-size: 13px; margin-top: 4px; }
+    .main { max-width: 900px; margin: 0 auto; padding: 32px 40px; }
+    .meta { background: #1a1a1a; border-radius: 8px; padding: 20px 24px; border-left: 4px solid var(--brand); box-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 24px; display: flex; gap: 40px; flex-wrap: wrap; }
+    .meta-item label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); display: block; margin-bottom: 4px; }
+    .meta-item strong { font-size: 14px; color: #fff; }
+    .section { margin-bottom: 28px; }
+    .section h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .card { background: #1a1a1a; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.3); margin-bottom: 12px; }
+    .decision { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .decision:last-child { border-bottom: none; }
+    .decision-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .decision-text { font-size: 14px; color: #ccc; }
+    .decision-text strong { display: block; margin-bottom: 2px; color: #fff; }
+    .decision-text span { color: var(--gray); font-size: 12px; }
+    .task-row { display: flex; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .task-row:last-child { border-bottom: none; }
+    .task-owner { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 3px; flex-shrink: 0; min-width: 50px; text-align: center; }
+    .owner-jl { background: #333; color: #fff; }
+    .owner-lance { background: #4a050c; color: #ff9999; }
+    .task-text { font-size: 13px; color: #ccc; }
+    .metric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .metric-card { background: #1a1a1a; border-radius: 8px; padding: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.3); text-align: center; }
+    .metric-card .number { font-size: 24px; font-weight: 700; color: var(--brand); }
+    .metric-card .label { font-size: 10px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+    .footer { margin-top: 40px; background: var(--dark); border-top: 3px solid var(--maroon); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer img { height: 32px; opacity: 0.9; }
+    .footer-text { color: #888; font-size: 12px; }
+    .footer-text strong { color: white; display: block; }
+    .footer-text a { color: var(--maroon); text-decoration: none; }
+
+    [data-theme="light"] body { background: #f5f5f5 !important; color: #0a0a0a !important; }
+    [data-theme="light"] .header { background: #0a0a0a !important; }
+    [data-theme="light"] .meta { background: white !important; box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+    [data-theme="light"] .meta-item strong { color: #000 !important; }
+    [data-theme="light"] .card { background: white !important; box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+    [data-theme="light"] .decision-text { color: #444 !important; }
+    [data-theme="light"] .decision-text strong { color: #000 !important; }
+    [data-theme="light"] .task-text { color: #444 !important; }
+    [data-theme="light"] .metric-card { background: white !important; box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important; }
+    [data-theme="light"] .section h2 { border-bottom-color: #e0e0e0 !important; }
+    [data-theme="light"] .decision { border-bottom-color: #e0e0e0 !important; }
+    [data-theme="light"] .task-row { border-bottom-color: #e0e0e0 !important; }
+  </style>
+</head>
+<body>
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode" style="position:fixed;top:14px;right:18px;z-index:9999;background:rgba(128,128,128,0.15);border:1px solid rgba(128,128,128,0.3);border-radius:20px;padding:6px 12px;font-size:16px;cursor:pointer;backdrop-filter:blur(6px);transition:background 0.2s,border-color 0.2s;" aria-label="Toggle theme">☀️</button>
+
+<div class="header">
+  <img src="https://thecoopbrla.com/wp-content/uploads/2024/03/porsche-logo-white.png" alt="Harris Porsche" style="height: 40px;">
+  <div class="header-right"><strong>Meeting Summary</strong>Prepared by The Cooperative Agency</div>
+</div>
+
+<div class="store-banner">
+  <h1>Harris Porsche — J&L Marketing Kick-Off</h1>
+  <p>April 1, 2026 &nbsp;·&nbsp; Paid Media Strategy &amp; Compliance Standards</p>
+</div>
+
+<div class="main">
+
+  <div class="meta">
+    <div class="meta-item"><label>Date</label><strong>April 1, 2026</strong></div>
+    <div class="meta-item"><label>Attendees</label><strong>Lance Faucheux, Caleb Bastin (J&L), Speaker 1 (J&L)</strong></div>
+    <div class="meta-item"><label>Topic</label><strong>Campaign Launch, Inventory Strategy, Porsche Compliance</strong></div>
+    <div class="meta-item"><label>Status</label><strong>Launch Pending Payment/Feed Fix</strong></div>
+  </div>
+
+  <!-- Campaign Budget -->
+  <div class="section">
+    <h2>💰 Media Budget & Allocation</h2>
+    <div class="metric-grid">
+      <div class="metric-card"><div class="number">$2,500</div><div class="label">April Budget</div></div>
+      <div class="metric-card"><div class="number">$2,500</div><div class="label">May Budget (Min)</div></div>
+      <div class="metric-card"><div class="number">Majority</div><div class="label">New Inventory</div></div>
+      <div class="metric-card"><div class="number">$100-150</div><div class="label">Service Focus</div></div>
+    </div>
+  </div>
+
+  <!-- Status -->
+  <div class="section">
+    <h2>🚦 Launch Status (as of April 1)</h2>
+    <div class="card">
+      <div class="decision">
+        <div class="decision-icon">🛒</div>
+        <div class="decision-text"><strong>Vehicle Listing Ads (VLA)</strong><span>Set up complete. Products not yet pulling from Merchant Center. Cody (Motive) is working to resolve the feed issue.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">📱</div>
+        <div class="decision-text"><strong>Meta Automotive Inventory Ads</strong><span>Inventory feed connected and ready for April 1 activation.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🏷️</div>
+        <div class="decision-text"><strong>Tealium Tagging</strong><span>In progress; scheduled for completion today (April 1).</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">💳</div>
+        <div class="decision-text"><strong>Payment & Billing</strong><span>Invoice sent to Adam Terrebonne (GM). J&L requires check/tracking number before going live.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Campaign Structure -->
+  <div class="section">
+    <h2>🎯 Campaign Structure</h2>
+    <div class="card">
+      <div class="decision">
+        <div class="decision-icon">🔍</div>
+        <div class="decision-text"><strong>Search Priority</strong><span>Primary: Macan & Cayenne (highest volume). Secondary: Panamera. Low: Taycan. <strong>OFF:</strong> 911 New Inventory (pre-owned focus only).</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">📍</div>
+        <div class="decision-text"><strong>Location Targeting</strong><span>Focus on Baton Rouge, NOLA, Kenner, Gonzales, and Prairieville. <strong>Requirement:</strong> Must use radius/lat-long targeting per Porsche OEM.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">💼</div>
+        <div class="decision-text"><strong>CPO Strategy</strong><span>Certified Pre-Owned Porsche focus + dedicated CPO Macan campaign (current 10 units in stock).</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Porsche Compliance -->
+  <div class="section">
+    <h2>⚠️ Porsche Compliance Standards</h2>
+    <div class="card" style="border-left: 4px solid #ef4444;">
+      <div class="decision">
+        <div class="decision-icon">🚫</div>
+        <div class="decision-text"><strong>Forbidden Verbiage</strong><span>NEVER use "off", "discount", or distressed pricing language. Use "Porsche Center" instead of "Porsche dealership".</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">📞</div>
+        <div class="decision-text"><strong>Static Call Tracking Only</strong><span>Dynamic Number Insertion (DNI) is strictly prohibited. Must use static call tracking numbers on the site.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">📧</div>
+        <div class="decision-text"><strong>Private Offers Only</strong><span>Dealer-custom "Exclusively at Harris Porsche" specials cannot be advertised publicly. Email distribution only.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Items -->
+  <div class="section">
+    <h2>📌 Action Items</h2>
+    <div class="card">
+      <div class="task-row">
+        <span class="task-owner owner-lance">Lance</span>
+        <span class="task-text">Build out Harris Porsche service specials page ASAP for service ad landing page</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-lance">Lance</span>
+        <span class="task-text">Coordinate with Adam Terrebonne for check + tracking number for J&L invoice</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-jl">J&L</span>
+        <span class="task-text">Resolve Merchant Center product feed issues with Cody (Motive)</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-jl">J&L</span>
+        <span class="task-text">Build creative once Porsche OEM incentives are confirmed (First Wed/Thu)</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-jl">J&L</span>
+        <span class="task-text">Ensure 911 New Inventory search campaigns are turned OFF</span>
+      </div>
+      <div class="task-row">
+        <span class="task-owner owner-lance">Lance</span>
+        <span class="task-text">Confirm May budget increase (potential $3,000) with Caleb by April 7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inventory & Conversion -->
+  <div class="section">
+    <h2>⚙️ Inventory & Conversion</h2>
+    <div class="card" style="font-size:13px; color:#aaa; line-height:1.8;">
+      <p><strong>Inventory Insights:</strong> Macan is the volume driver (90% gas vs electric). Used inventory sits at 26 units (12 CPO), mostly Macans. Porsche Diesel Tractor is in stock (historical item, not for active ad spend).</p>
+      <br>
+      <p><strong>Conversion Tracking:</strong> Tracking "Show Details" (SRP), "Contact Dealership", "Explore Payment", and "Trade-In" (VDP). Google Call Assets are active. Static phone tracking only.</p>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <img src="https://thecoopbrla.com/wp-content/uploads/2024/03/coop-logo-white.png" alt="The Cooperative Agency" style="height: 32px;">
+  <div class="footer-text">
+    <strong>The Cooperative Agency</strong>
+    <a href="sms:+12252765682">Text (225) 276-5682</a> · <a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · <a href="http://www.thecoopbrla.com">thecoopbrla.com</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var saved = localStorage.getItem('theme');
+  if(saved) document.documentElement.setAttribute('data-theme', saved);
+  else document.documentElement.setAttribute('data-theme', 'dark');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  var cur = el.getAttribute('data-theme');
+  var next = cur === 'dark' ? 'light' : 'dark';
+  el.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  document.getElementById('theme-toggle').textContent = next === 'dark' ? '☀️' : '🌙';
+}
+window.addEventListener('DOMContentLoaded',function(){
+  var t = document.documentElement.getAttribute('data-theme');
+  var btn = document.getElementById('theme-toggle');
+  if(btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+});
+</script>
+</body>
+</html>
