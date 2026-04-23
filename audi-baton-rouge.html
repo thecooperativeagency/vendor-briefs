@@ -19,11 +19,12 @@
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--coop-light); color: var(--coop-dark); font-size: 14px; line-height: 1.6; }
     .header { background: var(--coop-dark); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--coop-red); }
     .header img { height: 48px; }
-    .header-right { text-align: right; color: #aaa; font-size: 12px; }
-    .header-right strong { color: var(--coop-white); display: block; font-size: 14px; }
-    .store-banner { background: var(--brand); color: white; padding: 20px 40px; }
-    .store-banner h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
-    .store-banner p { opacity: 0.85; font-size: 13px; margin-top: 4px; }
+    .store-banner { background: var(--brand); color: white; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
+    .store-banner-left h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+    .store-banner-left p { opacity: 0.85; font-size: 13px; margin-top: 4px; }
+    .store-banner-right { text-align: right; }
+    .store-banner-right strong { display: block; font-size: 18px; font-weight: 700; }
+    .store-banner-right span { opacity: 0.85; font-size: 12px; }
     .gm-card { background: white; margin: 24px 40px 0; border-radius: 8px; padding: 20px 24px; border-left: 4px solid var(--brand); box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
     .gm-card h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--coop-gray); margin-bottom: 8px; }
     .gm-card .gm-name { font-size: 20px; font-weight: 700; }
@@ -65,8 +66,6 @@
     /* Dark mode overrides for light-first vendor briefs */
     [data-theme="dark"] body { background: #0f0f0f !important; color: #e0e0e0 !important; }
     [data-theme="dark"] .header { background: #0a0a0a !important; }
-    [data-theme="dark"] .header-right { color: #888 !important; }
-    [data-theme="dark"] .header-right strong { color: #fff !important; }
     [data-theme="dark"] .gm-card { background: #1a1a1a !important; border-color: inherit; box-shadow: none !important; color: #e0e0e0 !important; }
     [data-theme="dark"] .gm-card h2 { color: #888 !important; }
     [data-theme="dark"] .gm-card .gm-name { color: #fff !important; }
@@ -112,9 +111,11 @@
 
 <div class="header">
   <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="filter:brightness(0) invert(1); height:40px;">
-  <div class="header-right"><strong>GM Brief</strong>Prepared by The Cooperative Agency · April 2026</div>
 </div>
-<div class="store-banner"><h1>Audi Baton Rouge</h1><p>Baton Rouge, Louisiana</p></div>
+<div class="store-banner">
+  <div class="store-banner-left"><h1>Audi Baton Rouge</h1><p>Baton Rouge, Louisiana</p></div>
+  <div class="store-banner-right"><strong>GM Brief</strong><span>Prepared by The Cooperative Agency · April 2026</span></div>
+</div>
 
 <div class="gm-card">
   <h2>Prepared For</h2>
