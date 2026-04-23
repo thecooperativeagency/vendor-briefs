@@ -26,12 +26,15 @@
     .section { margin-bottom: 28px; }
     .section h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
     .card { background: white; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 12px; }
+    .card p { margin-bottom: 12px; }
+    .card p:last-child { margin-bottom: 0; }
     .decision { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); }
     .decision:last-child { border-bottom: none; }
     .decision-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
     .decision-text { font-size: 14px; }
     .decision-text strong { display: block; margin-bottom: 2px; }
     .decision-text span { color: var(--gray); font-size: 12px; }
+    .store-specific { background: white; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid var(--brand); }
     .footer { margin-top: 40px; background: var(--dark); border-top: 3px solid var(--red); padding: 28px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
     .footer img { height: 32px; opacity: 0.9; }
     .footer-text { color: #aaa; font-size: 12px; }
@@ -40,7 +43,7 @@
 
     /* Dark mode overrides */
     [data-theme="dark"] body { background: #0f0f0f !important; color: #e0e0e0 !important; }
-    [data-theme="dark"] .meta, [data-theme="dark"] .card { background: #1a1a1a !important; box-shadow: none !important; border-color: #2a2a2a !important; }
+    [data-theme="dark"] .meta, [data-theme="dark"] .card, [data-theme="dark"] .store-specific { background: #1a1a1a !important; box-shadow: none !important; border-color: #2a2a2a !important; }
     [data-theme="dark"] .section h2 { color: #888 !important; border-bottom-color: #333 !important; }
     [data-theme="dark"] .decision-text span { color: #888 !important; }
     [data-theme="dark"] .footer { background: #0a0a0a !important; }
@@ -57,8 +60,8 @@
 <div class="back"><a href="../brian-harris-bmw.html">← Back to Brian Harris BMW Vendor Brief</a></div>
 
 <div class="store-banner">
-  <h1>Brian Harris BMW — AutoHub Demo</h1>
-  <p>April 22, 2026 &nbsp;·&nbsp; Automated Vehicle Acquisition Platform</p>
+  <h1>Brian Harris BMW — AutoHub</h1>
+  <p>Baton Rouge, Louisiana · Brian Harris Automotive Group</p>
 </div>
 
 <div class="main">
@@ -69,23 +72,66 @@
   </div>
 
   <div class="section">
-    <h2>🎯 Current State</h2>
+    <h2>🎯 What AutoHub Does</h2>
     <div class="card">
-      <p>BHBMW already has AMP (VinSolutions) doing light service-drive outreach manually. AutoHub would automate and scale this significantly.</p>
+      <p>AutoHub is an automated vehicle acquisition platform that turns your service drive into a used car sourcing engine. Instead of relying solely on auctions or trade-ins, the system proactively engages customers already in your service bay — people who already trust your dealership — to evaluate and potentially acquire their vehicles.</p>
+      <p>Within 5–7 minutes of a customer checking in for service, AutoHub sends a text message offering a no-obligation vehicle valuation. The customer can respond right from their phone, and the system handles the rest: automated pricing, appointment scheduling, and handoff to your acquisitions team.</p>
     </div>
   </div>
 
   <div class="section">
-    <h2>✅ Key Features & Pricing</h2>
+    <h2>✅ Product Features & Pricing</h2>
     <div class="card">
       <div class="decision">
         <div class="decision-icon">💰</div>
-        <div class="decision-text"><strong>Pricing</strong><span>$1,125–$1,395/store/mo; online tool +$299.</span></div>
+        <div class="decision-text"><strong>Pricing</strong><span>Service Drive Acquisition: $1,125–$1,395/store/mo. Online trade-in tool add-on: +$299/mo. Group pricing (8+ stores): $995/store/mo.</span></div>
       </div>
       <div class="decision">
-        <div class="decision-icon">🛠️</div>
-        <div class="decision-text"><strong>Capabilities</strong><span>AI copilot texts service customers, KBB/MMR pricing engine, OBD in-store appraisal device, push to vAuto/CRM, guardrails/blacklists, targeted pricing rules.</span></div>
+        <div class="decision-icon">🤖</div>
+        <div class="decision-text"><strong>AI Copilot</strong><span>Automated text outreach to service customers within 5–7 minutes of check-in. Handles responses, answers questions, and books appraisal appointments 24/7.</span></div>
       </div>
+      <div class="decision">
+        <div class="decision-icon">📊</div>
+        <div class="decision-text"><strong>Pricing Engine</strong><span>Uses KBB, MMR, and open market listing data to generate competitive valuations. Includes OBD in-store appraisal device for condition verification.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🔗</div>
+        <div class="decision-text"><strong>Integration</strong><span>Pushes leads directly to vAuto and your CRM. No manual data entry. Works with CDK, Reynolds, VinSolutions, and most major DMS/CRM platforms.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🛡️</div>
+        <div class="decision-text"><strong>Guardrails & Blacklists</strong><span>Set rules to exclude vehicles based on Carfax issues, mileage caps, specific models, age, or any criteria you define. Only acquire the vehicles you actually want.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🎯</div>
+        <div class="decision-text"><strong>Targeted Pricing Rules</strong><span>Create custom pricing strategies by model, condition, or market segment. Pay more for high-demand units, less for common inventory.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📈 Performance Metrics</h2>
+    <div class="card">
+      <div class="decision">
+        <div class="decision-icon">📱</div>
+        <div class="decision-text"><strong>Opt-In Rate</strong><span>~20% of service customers engage with the valuation offer.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🚗</div>
+        <div class="decision-text"><strong>Lead-to-Purchase</strong><span>~7% of engaged customers result in a vehicle acquisition.</span></div>
+      </div>
+      <div class="decision">
+        <div class="decision-icon">🏆</div>
+        <div class="decision-text"><strong>Case Study — Porsche Marin</strong><span>Paid for 6 months of service in their first month using AutoHub. ROI is immediate and measurable.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🏎️ What This Means for Brian Harris BMW</h2>
+    <div class="store-specific">
+      <p>Brian Harris BMW already has AMP (VinSolutions) doing light service-drive outreach manually. AutoHub would automate and scale this significantly — replacing manual campaigns with AI-driven, 24/7 outreach that never misses a service customer.</p>
+      <p>The key question is whether AMP is delivering enough volume. If AMP campaigns are underperforming or require too much manual management, AutoHub represents a clear upgrade path. If AMP is already producing strong results, BHBMW may want to focus resources on BMW Jackson first.</p>
     </div>
   </div>
 
