@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMW of Jackson Management Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1116;
+      --card: #171b22;
+      --border: #2a3240;
+      --text: #edf2f7;
+      --muted: #9aa5b1;
+      --accent: #c0392b;
+      --accent-2: #1d6fa8;
+      --success: #2ecc71;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #0b0f14 0%, #111827 100%);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 48px;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+    .topbar { padding: 18px 0; }
+    .topbar a { color: var(--muted); text-decoration: none; font-size: 13px; }
+    header {
+      padding: 28px 0 34px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 34px;
+    }
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 40px;
+      line-height: 1.05;
+      margin-bottom: 14px;
+      letter-spacing: -0.03em;
+    }
+    .sub {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 28px 0 36px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .stat-label { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+    .stat-value { font-size: 28px; font-weight: 800; }
+    .stat-sub { color: var(--muted); font-size: 12px; margin-top: 6px; }
+    section { margin-top: 34px; }
+    h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .card-copy {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+      min-height: 66px;
+    }
+    .btns { display: flex; flex-direction: column; gap: 10px; }
+    .btn {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+    .btn.primary { background: var(--accent); color: white; }
+    .btn.secondary { background: rgba(29,111,168,0.12); color: #8fc7ef; border-color: rgba(29,111,168,0.3); }
+    .btn.ghost { background: rgba(255,255,255,0.03); color: var(--text); border-color: rgba(255,255,255,0.08); }
+    .note {
+      background: rgba(192,57,43,0.08);
+      border: 1px solid rgba(192,57,43,0.2);
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      padding: 18px 20px;
+      color: #e5e7eb;
+      font-size: 14px;
+      margin-top: 22px;
+    }
+    .footer {
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media (max-width: 980px) {
+      .hero-grid, .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 700px) {
+      h1 { font-size: 30px; }
+      .hero-grid, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar"><a href="https://hub.thecoopbrla.com/">← Back to Command Hub</a></div>
+
+    <header>
+      <div class="eyebrow">BMW of Jackson</div>
+      <h1>Management Hub</h1>
+      <p class="sub">One place for the BMW of Jackson management team to access the current customer-facing dashboards, traffic analysis, and CRM Engine reports built by The Cooperative Agency.</p>
+
+      <div class="hero-grid">
+        <div class="stat">
+          <div class="stat-label">30-Day Sessions</div>
+          <div class="stat-value">25,934</div>
+          <div class="stat-sub">GA4 website traffic</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Cleaned Leads</div>
+          <div class="stat-value">346</div>
+          <div class="stat-sub">CRM records after dedupe</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Sold-like</div>
+          <div class="stat-value">48</div>
+          <div class="stat-sub">Sold + sold integration</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Internet Close Rate</div>
+          <div class="stat-value">3.6%</div>
+          <div class="stat-sub">8 sold-like from 224 internet leads</div>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Dashboards & Reports</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">GA4 Dashboard</div>
+          <div class="card-copy">Live website traffic and engagement dashboard for BMW of Jackson, including traffic, sources, top model pages, and performance trends.</div>
+          <div class="btns">
+            <a class="btn primary" target="_blank" href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-dashboard.html">Open GA4 Dashboard</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">CRM Engine — Management Baseline</div>
+          <div class="card-copy">Management-facing baseline built from cleaned CRM data. Useful for leadership review and operational alignment.</div>
+          <div class="btns">
+            <a class="btn primary" target="_blank" href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-sales-baseline.html">Open Baseline Report</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">CRM Engine — Opportunity Brief</div>
+          <div class="card-copy">Full funnel report connecting website traffic, lead generation, close rate, affordability mismatch, and inventory strategy.</div>
+          <div class="btns">
+            <a class="btn primary" target="_blank" href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-sales-opportunity-brief.html">Open Opportunity Brief</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Recommended Review Order</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">1. Website Traffic</div>
+          <div class="card-copy">Start with the GA4 dashboard to review volume, source mix, landing demand, and model-level interest.</div>
+          <div class="btns">
+            <a class="btn secondary" target="_blank" href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-dashboard.html">Review Traffic First</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">2. Management Baseline</div>
+          <div class="card-copy">Use the baseline report for a clean operating snapshot of lead mix, conversion, and pipeline.</div>
+          <div class="btns">
+            <a class="btn secondary" target="_blank" href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-sales-baseline.html">Review Baseline</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">3. Opportunity Brief</div>
+          <div class="card-copy">Use the opportunity brief to connect traffic, affordability, inventory match, lead volume, and close-rate improvement opportunity.</div>
+          <div class="btns">
+            <a class="btn secondary" target="_blank" href="https://thecooperativeagency.github.io/Ga4-dashboards/bmw-jackson-sales-opportunity-brief.html">Review Opportunity Brief</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">
+      <strong>Current working thesis:</strong> BMW of Jackson appears to have enough web traffic to generate more opportunity than it is currently capturing. The two main gaps identified so far are <strong>inventory-price mismatch</strong> and <strong>low lead close rate</strong>. Fixing both should produce compounding lift.
+    </div>
+
+    <div class="footer">
+      Built by The Cooperative Agency · Baton Rouge, LA · Updated April 2026
+    </div>
+  </div>
+</body>
+</html>
