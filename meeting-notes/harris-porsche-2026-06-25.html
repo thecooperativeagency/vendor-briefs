@@ -72,14 +72,14 @@
 <div class="main">
   <div class="meta">
     <div class="meta-item"><label>Date</label><strong>June 25, 2026</strong></div>
+    <div class="meta-item"><label>Topic</label><strong>Website UX, mystery-shop leads, reporting, photos</strong></div>
     <div class="meta-item"><label>Source</label><strong>Spellar meeting summary</strong></div>
-    <div class="meta-item"><label>Focus</label><strong>Website UX, mystery-shop leads, reporting, photos</strong></div>
   </div>
 
   <div class="section">
     <h2>✨ Overview</h2>
     <div class="card">
-      <p>Team reviewed website defaults, mystery-shop lead delivery issues, and lead-handling practices. Key outcomes: escalate the ZIP/payment estimate behavior, rerun the mystery shop after an IP-rate-limit workaround, and keep manually auditing photo ordering and V Auto transfers.</p>
+      <p>Team reviewed website UX defaults, mystery-shop lead delivery issues, and lead-handling practices. Key outcomes: investigate/remove unwanted default behavior (zip/payment estimate), rerun mystery shop after resolving IP-rate limits, and fix photo ordering and reporting gaps.</p>
     </div>
   </div>
 
@@ -88,86 +88,74 @@
     <div class="card">
       <div class="decision">
         <div class="decision-icon">✅</div>
-        <div class="decision-text"><strong>Rerun mystery shop</strong><span>Do it after the IP-rate-limit workaround is in place.</span></div>
+        <div class="decision-text"><strong>Rerun the mystery shop</strong><span>After implementing a workaround for IP rate-limits.</span></div>
       </div>
       <div class="decision">
         <div class="decision-icon">✅</div>
-        <div class="decision-text"><strong>Escalate website defaults</strong><span>Send email about ZIP/payment estimate defaults and investigate cookie/profile logic.</span></div>
+        <div class="decision-text"><strong>Escalate website defaulting behavior</strong><span>Via email and investigate cookie/profile logic.</span></div>
       </div>
       <div class="decision">
         <div class="decision-icon">✅</div>
-        <div class="decision-text"><strong>Manual photo QC stays on</strong><span>Keep auditing inventory photos and re-sorting V Auto transfers manually.</span></div>
+        <div class="decision-text"><strong>Manually audit inventory photos</strong><span>Continue manual QC for V Auto transfers.</span></div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>🧠 Key Points</h2>
+    <h2>Website defaults & UX issues</h2>
     <div class="card">
-      <div class="outline-item">
-        <strong>Website defaults & UX issues</strong>
-        The site appears to default to a saved ZIP and shows a payment estimate without an obvious opt-out. The old ZIP popover behavior seems gone. Likely cookie/cache or saved-profile behavior; needs an escalation email and a real fix or opt-out.
-      </div>
-      <div class="outline-item">
-        <strong>Mystery-shop lead delivery</strong>
-        IP-based submission limits blocked many leads from reaching dealers. The original test results are not reliable until the shop is rerun with a distributed submission approach or other workaround.
-      </div>
-      <div class="outline-item">
-        <strong>Lead response practices</strong>
-        Text and phone beat email. Best practice is text first, call if needed, and log every contact attempt in the CRM.
-      </div>
-      <div class="outline-item">
-        <strong>Reporting & metrics</strong>
-        The conversion report was removed from PPN; the team pulled separate YTD data and reported a 74% win rate and a 9/10 website score.
-      </div>
-      <div class="outline-item">
-        <strong>Inventory photos & V Auto integration</strong>
-        Photo ordering broke and required manual re-sorting. V Auto transfers are still not trusted to preserve categories correctly, so manual QC remains necessary.
-      </div>
+      <p>Discussed unexpected defaults (payment estimate and saved zip), the missing initial zip popover, and whether site should auto-fill based on saved cookies. Participants noticed the site defaulting to a previously saved ZIP and showing the payment estimate without an obvious way to opt out. The historical behavior (a popover prompting ZIP on first entry) has changed. The group debated whether the behavior is caused by retained cookies/cache and whether it should be corrected or made optional. An escalation email will be sent to address the flaw.</p>
+      <div class="outline-item"><strong>Insight</strong>Site is defaulting ZIP/payment estimate based on saved data; previous popover behavior removed.</div>
+      <div class="outline-item"><strong>Risk</strong>Potential cookie/cache interaction causing unexpected defaults.</div>
+      <div class="outline-item"><strong>Action</strong>Send email to escalate and decide ownership.</div>
+      <div class="outline-item"><strong>Task</strong>Investigate zip/default behavior — Engineering/product to confirm source (cookies, saved profile, or code change) and propose fix or opt-out for payment estimate and zip defaulting.</div>
     </div>
   </div>
 
   <div class="section">
-    <h2>📌 Action Items</h2>
+    <h2>Mystery-shop lead delivery & IP rate limits</h2>
     <div class="card">
-      <div class="task-row">
-        <span class="task-priority p-urgent">Action</span>
-        <span class="task-text">Investigate ZIP/default payment estimate behavior and decide whether the bug is cookies, saved profile data, or a code change.</span>
-      </div>
-      <div class="task-row">
-        <span class="task-priority p-urgent">Action</span>
-        <span class="task-text">Create a mystery-shop re-run plan that avoids IP limits by staggering submissions or using distributed IPs.</span>
-      </div>
-      <div class="task-row">
-        <span class="task-priority p-normal">Action</span>
-        <span class="task-text">Add contact attempts as CRM notes and continue multi-channel follow-up.</span>
-      </div>
-      <div class="task-row">
-        <span class="task-priority p-normal">Action</span>
-        <span class="task-text">Request restoration of the conversion report or an equivalent replacement in PPN/reporting.</span>
-      </div>
-      <div class="task-row">
-        <span class="task-priority p-normal">Action</span>
-        <span class="task-text">Audit inventory photos, fix any misordered sets, and document the V Auto transfer checklist.</span>
-      </div>
-      <div class="task-row">
-        <span class="task-priority p-normal">Action</span>
-        <span class="task-text">Send an escalation email to product/engineering about the ZIP/payment default issue.</span>
-      </div>
+      <p>Mystery shop revealed IP-based submission limits caused many dealers to miss leads; the team needs a workaround and to redo the test. The team preloaded unique phone numbers and submitted many site leads simultaneously. New IP protocols limited submissions per IP within short windows, which caused two-thirds of dealers to not receive the leads. This discovery invalidates the initial mystery-shop results and requires a re-run after implementing a distributed submission approach or coordinating with platform vendors.</p>
+      <div class="outline-item"><strong>Pain point</strong>IP-rate-limits blocked bulk mystery-shop submissions; many dealers missed leads.</div>
+      <div class="outline-item"><strong>Action</strong>Need to redo mystery shop after technical workaround.</div>
+      <div class="outline-item"><strong>Task</strong>Plan mystery shop re-run — Create an execution plan that avoids IP limits (stagger submissions, use distributed IPs, or coordinate with vendor) and schedule the redo.</div>
     </div>
   </div>
 
   <div class="section">
-    <h2>🦞 Lance's Take</h2>
-    <div class="card" style="font-size:13px; color:#444; line-height:1.8; border-left: 4px solid var(--brand);">
-      Site defaults and lead delivery issues need escalation; the mystery shop should be rerun only after the IP workaround. Manual photo QC stays in the loop.
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>📌 Next Step</h2>
+    <h2>Lead response practices</h2>
     <div class="card">
-      Send the escalation email, rerun the mystery shop with a workaround, and keep the inventory photo audit moving.
+      <p>Emphasis that texting and calling outperform email; best-practice is to send multiple contact channels quickly and add CRM notes. Team agreed most customers respond by text or phone, and email is low-performing. Recommended practice: attempt text first, call if no response, and send email only when needed; always add notes to CRM and retry communication via multiple channels within a short window.</p>
+      <div class="outline-item"><strong>Insight</strong>Texting yields better conversion than email; send multi-channel follow-ups quickly.</div>
+      <div class="outline-item"><strong>Action</strong>Add contact attempts as CRM notes and re-attempt outreach.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Reporting & performance metrics</h2>
+    <div class="card">
+      <p>Conversion report was removed from PPN; team pulled year-to-date data separately and found a 74% win rate; website scorecard was strong (9/10). A favored conversion report was removed centrally; the presenter pulled cross-source data and reported a 74% win rate vs RDRs—highlighting strong follow-up performance. Monthly site score was high (9/10), with availability windows as the main risk area.</p>
+      <div class="outline-item"><strong>Pain point</strong>Conversion report removed; request to restore it.</div>
+      <div class="outline-item"><strong>Praise</strong>74% win rate and 9/10 website score — positive performance.</div>
+      <div class="outline-item"><strong>Task</strong>Request report restoration — Ask reporting/PPN team to restore the conversion report or provide equivalent access.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Inventory photos & V Auto integration</h2>
+    <div class="card">
+      <p>Photos were mis-sorted in the inventory platform; manual resorting was required and V Auto transfers may not preserve categories reliably. Several vehicle photo sets were found unsorted or in miscellaneous buckets; the presenter manually resorted all listings. The team noted distrust of relying solely on V Auto for correct sorting and will continue manual verification.</p>
+      <div class="outline-item"><strong>Pain point</strong>Photo ordering broke; manual re-sorting completed.</div>
+      <div class="outline-item"><strong>Action</strong>Continue manual QC for V Auto transfers.</div>
+      <div class="outline-item"><strong>Task</strong>Audit and fix inventory photos — Perform a complete inventory photo audit, fix misordered images, and document steps to prevent recurrence.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Action items</h2>
+    <div class="card">
+      <div class="task-row"><span class="task-priority p-urgent">Action</span><span class="task-text">Email escalation about UX bug</span></div>
+      <div class="task-row"><span class="task-priority p-normal">Action</span><span class="task-text">Contact Dominic & Cody</span></div>
     </div>
   </div>
 </div>
