@@ -4,17 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Brian Harris AG — VinSolutions VCA Demo · July 28, 2026</title>
+  <title>VinSolutions VCA Demo · July 28, 2026</title>
   <style>
-    :root { --dark: #0a0a0a; --red: #c0392b; --brand: #1c69d4; --light: #f5f5f5; --border: #e0e0e0; --gray: #666; --good: #166534; --good-bg: #ecfdf3; --watch: #92400e; --watch-bg: #fffbeb; }
+    :root { --dark: #0a0a0a; --red: #c0392b; --brand: #1c69d4; --light: #f5f5f5; --border: #e0e0e0; --gray: #666; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--light); color: var(--dark); font-size: 14px; line-height: 1.6; overflow-x: clip; }
     .header { background: var(--dark); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--red); }
     .header img { height: 48px; }
     .header-right { text-align: right; color: #aaa; font-size: 12px; }
     .header-right strong { color: white; display: block; font-size: 14px; }
-    .back { background: #111; padding: 10px 40px; border-bottom: 1px solid #222; }
-    .back a { color: var(--red); text-decoration: none; font-size: 12px; font-weight: 600; margin-right: 18px; }
     .store-banner { background: var(--brand); color: white; padding: 20px 40px; }
     .store-banner h1 { font-size: 22px; font-weight: 700; }
     .store-banner p { opacity: 0.9; font-size: 13px; margin-top: 4px; }
@@ -22,18 +20,19 @@
     .meta { background: white; border-radius: 8px; padding: 20px 24px; border-left: 4px solid var(--brand); box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 24px; display: flex; gap: 32px; flex-wrap: wrap; }
     .meta-item label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); display: block; margin-bottom: 4px; }
     .meta-item strong { font-size: 14px; }
-    .section { margin-bottom: 28px; scroll-margin-top: 16px; }
+    .section { margin-bottom: 28px; }
     .section h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
     .card { background: white; border-radius: 8px; padding: 20px 24px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 12px; }
     .card p { margin-bottom: 12px; }
     .card p:last-child { margin-bottom: 0; }
-    .verdict { background: linear-gradient(180deg, #eff6ff 0%, #fff 70%); border: 1px solid #bfdbfe; border-left: 4px solid var(--brand); border-radius: 8px; padding: 18px 22px; margin-bottom: 20px; }
-    .verdict strong { display: block; font-size: 15px; margin-bottom: 6px; color: #0c4a6e; }
-    .verdict p { color: #334155; font-size: 14px; margin: 0; }
-    .pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-    .pill { font-size: 11px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; background: #e8f0fe; color: #1c69d4; }
-    .pill.swap { background: #fef3c7; color: #92400e; }
-    .pill.ok { background: var(--good-bg); color: var(--good); }
+    .card ul { margin: 0 0 0 18px; }
+    .card li { margin-bottom: 6px; }
+    .scope { background: #fffbeb; border: 1px solid #fcd34d; border-left: 4px solid #d97706; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+    .scope strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: #92400e; margin-bottom: 8px; }
+    .scope p { margin: 0 0 8px; color: #444; font-size: 14px; }
+    .scope p:last-child { margin-bottom: 0; }
+    .scope .in { color: #166534; }
+    .scope .out { color: #991b1b; }
     .decision { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--border); }
     .decision:last-child { border-bottom: none; }
     .decision-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
@@ -45,7 +44,6 @@
     .fb-card { background: white; border-radius: 8px; padding: 16px 18px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-top: 3px solid var(--brand); }
     .fb-card .f { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
     .fb-card .b { font-size: 13px; color: #444; }
-    .fb-card .b em { font-style: normal; color: var(--brand); font-weight: 600; }
     .shot { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); margin-bottom: 14px; }
     .shot img { width: 100%; height: auto; display: block; background: #111; }
     .shot figcaption { padding: 12px 16px 14px; font-size: 13px; color: #444; border-top: 1px solid var(--border); }
@@ -59,7 +57,6 @@
     .task-row:last-child { border-bottom: none; }
     .task-owner { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 3px; flex-shrink: 0; margin-top: 2px; }
     .owner-vendor { background: #e8f0fe; color: #1c69d4; }
-    .owner-lance { background: #fce8e6; color: #c0392b; }
     .owner-store { background: #e6f4ea; color: #1e7e34; }
     .task-text { font-size: 13px; }
     .metric-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; }
@@ -71,20 +68,18 @@
     .footer img { height: 32px; opacity: 0.9; }
     .footer-text { color: #aaa; font-size: 12px; }
     .footer-text strong { color: white; display: block; }
-    .footer-text a { color: var(--red); text-decoration: none; }
     @media (max-width: 640px) {
-      .header, .back, .store-banner, .main, .footer { padding-left: 18px; padding-right: 18px; }
+      .header, .store-banner, .main, .footer { padding-left: 18px; padding-right: 18px; }
       .meta { gap: 16px; }
       .compare { display: block; overflow-x: auto; }
     }
     [data-theme="dark"] body { background: #0f0f0f !important; color: #e0e0e0 !important; }
     [data-theme="dark"] .meta, [data-theme="dark"] .card, [data-theme="dark"] .fb-card, [data-theme="dark"] .shot, [data-theme="dark"] .metric-card, [data-theme="dark"] .compare { background: #1a1a1a !important; box-shadow: none !important; border-color: #2a2a2a !important; color: #e0e0e0 !important; }
     [data-theme="dark"] .section h2 { color: #888 !important; border-bottom-color: #333 !important; }
-    [data-theme="dark"] .decision-text span, [data-theme="dark"] .fb-card .b, [data-theme="dark"] .shot figcaption, [data-theme="dark"] .task-text { color: #bbb !important; }
+    [data-theme="dark"] .decision-text span, [data-theme="dark"] .fb-card .b, [data-theme="dark"] .shot figcaption, [data-theme="dark"] .task-text, [data-theme="dark"] .scope p { color: #bbb !important; }
     [data-theme="dark"] .shot figcaption strong, [data-theme="dark"] .decision-text strong, [data-theme="dark"] .fb-card .f { color: #fff !important; }
-    [data-theme="dark"] .verdict { background: #0f172a !important; border-color: #1e3a5f !important; }
-    [data-theme="dark"] .verdict strong { color: #93c5fd !important; }
-    [data-theme="dark"] .verdict p { color: #cbd5e1 !important; }
+    [data-theme="dark"] .scope { background: #1c1917 !important; border-color: #78350f !important; }
+    [data-theme="dark"] .scope strong { color: #fbbf24 !important; }
     [data-theme="dark"] .compare th { background: #0a0a0a !important; }
     [data-theme="dark"] .compare td { border-bottom-color: #2a2a2a !important; color: #ccc !important; }
     [data-theme="dark"] .footer { background: #0a0a0a !important; }
@@ -98,288 +93,285 @@
   <div class="header-right"><strong>Meeting Summary</strong>Prepared by The Cooperative Agency</div>
 </div>
 
-<div class="back">
-  <a href="../brian-harris-bmw.html">← Brian Harris BMW Vendor Brief</a>
-  <a href="../audi-baton-rouge.html">Audi Baton Rouge Vendor Brief</a>
-</div>
-
 <div class="store-banner">
   <h1>VinSolutions Virtual Contact Assistant (VCA)</h1>
-  <p>Brian Harris Automotive Group demo · July 28, 2026 · Candidate to replace Podium for AI chat / BDC text &amp; email</p>
+  <p>Product demo · July 28, 2026 · Brian Harris Automotive Group</p>
 </div>
 
 <div class="main">
 
   <div class="meta">
     <div class="meta-item"><label>Date</label><strong>July 28, 2026</strong></div>
-    <div class="meta-item"><label>Audience</label><strong>Brian Harris AG · Lance Faucheux</strong></div>
-    <div class="meta-item"><label>Presenter</label><strong>Kyle Smith (CAI – Kansas) · VinSolutions / Cox</strong></div>
-    <div class="meta-item"><label>Product</label><strong>VCA · “Vinessa” agentic assistant</strong></div>
-    <div class="meta-item"><label>Pricing quoted</label><strong>$700/mo (from $1,000) · month-to-month</strong></div>
+    <div class="meta-item"><label>Attendees</label><strong>Brian Harris AG · Lance Faucheux</strong></div>
+    <div class="meta-item"><label>Presenter</label><strong>Kyle Smith (CAI – Kansas) · VinSolutions / Cox Automotive</strong></div>
+    <div class="meta-item"><label>Product shown</label><strong>VCA · labeled “Vinessa” / Virtual Contact Assistant in CRM</strong></div>
+    <div class="meta-item"><label>Pricing stated</label><strong>$700/mo (discounted from $1,000) · month-to-month</strong></div>
   </div>
 
-  <div class="verdict">
-    <strong>Working take — Podium swap candidate</strong>
-    <p>VinSolutions VCA is an <em>agentic</em> sales assistant that lives <strong>inside the CRM you already run</strong>. It texts/emails customers, keeps multi-topic conversations going, books test drives and appraisals, writes appointments and tasks onto the salesperson’s CRM record, and backs off when a human has already touched the lead. Today’s channels are <strong>text + email</strong> (web chat and voice are roadmap). If BHAG’s goal is fewer third-party chat silos and tighter VinSolutions lead handling, this is the cleanest native path we have seen — at a stated <strong>$700/store/mo, no setup fee, 30-day out</strong>.</p>
-    <div class="pill-row">
-      <span class="pill swap">Podium replacement eval</span>
-      <span class="pill ok">Native VinSolutions write-back</span>
-      <span class="pill">NADA paid pilot</span>
-      <span class="pill">Text + email now</span>
-    </div>
+  <div class="scope">
+    <strong>Scope of this evaluation</strong>
+    <p class="in"><strong>In scope — Podium AI BDC only.</strong> Automated outbound/inbound sales follow-up over text and email that works leads and books appointments inside VinSolutions.</p>
+    <p class="out"><strong>Not in scope — does not replace:</strong> Podium review invites / reputation management, or the Podium website chat tool. Those stay separate unless a different product covers them later.</p>
+    <p>Channels stated on the demo for VCA today: <strong>text and email</strong>. Web chat and voice were listed on the roadmap, not as current ship features.</p>
   </div>
 
   <div class="section">
-    <h2>What it is</h2>
+    <h2>What was demonstrated</h2>
     <div class="card">
-      <p>VCA (shown in product UI as <strong>Vinessa / VCA Virtual Contact Assistant</strong>) is VinSolutions’ next-gen assistant — positioned against their older NLP bot. Instead of rigid scripts, it runs goal-directed sales conversations: keep context, pull inventory facts, firm up vague times against store hours, schedule the appointment, remind the customer what to bring, and escalate pricing/finance to a human with a CRM task.</p>
-      <p>It reads recent communications (about the last <strong>20 messages / 30 days</strong>), uses the inventory feed for year/make/model/trim/features/availability, and can present as a named human-style agent or identify as a virtual assistant — dealer-controlled.</p>
+      <p>VinSolutions presented an agentic virtual assistant that runs sales conversations and writes results into the CRM. Presenter contrasted it with VinSolutions’ older NLP-based system.</p>
+      <p>Stated behaviors during the demo:</p>
+      <ul>
+        <li>Conducts multi-topic sales conversations (hours, vehicle interest, trade, appointment)</li>
+        <li>Primary goal described as scheduling test drives / in-person appointments</li>
+        <li>Gathers trade and vehicle interest details</li>
+        <li>Creates appointments, test-drive, and appraisal entries in CRM under the salesperson and consumer profile</li>
+        <li>Reads recent communications (about the last 20 messages in 30 days)</li>
+        <li>Pulls inventory details (year, make, model, trim, features) and availability from the inventory feed</li>
+        <li>Creates tasks or appointments in CRM when needed</li>
+        <li>Can present as human-style or identify as a virtual assistant; can be named (dealer-controlled)</li>
+        <li>Escalates pricing/finance discussion to a human and creates a task for the assigned salesperson</li>
+      </ul>
     </div>
   </div>
 
   <div class="section">
-    <h2>Headline numbers from the demo</h2>
+    <h2>Pricing and terms stated</h2>
     <div class="metric-grid">
-      <div class="metric-card"><div class="number">$700</div><div class="label">Per month quoted</div></div>
+      <div class="metric-card"><div class="number">$700</div><div class="label">Monthly price quoted</div></div>
       <div class="metric-card"><div class="number">$1,000</div><div class="label">List before discount</div></div>
-      <div class="metric-card"><div class="number">$0</div><div class="label">Setup fee</div></div>
-      <div class="metric-card"><div class="number">30-day</div><div class="label">Cancel / month-to-month</div></div>
-      <div class="metric-card"><div class="number">Text+Email</div><div class="label">Live channels now</div></div>
-      <div class="metric-card"><div class="number">Chat+Voice</div><div class="label">Roadmap later</div></div>
+      <div class="metric-card"><div class="number">$0</div><div class="label">Setup fee stated</div></div>
+      <div class="metric-card"><div class="number">MTM</div><div class="label">Month-to-month billing</div></div>
+      <div class="metric-card"><div class="number">30-day</div><div class="label">Cancellation window stated</div></div>
+      <div class="metric-card"><div class="number">No LTC</div><div class="label">No long-term contract stated</div></div>
     </div>
-    <p class="footnote">Pricing was confirmed verbally on the call. Recap email + live role-play / demo link still owed by VinSolutions (Jeff).</p>
+    <p class="footnote">Figures and terms as stated verbally on the demo. Jeff (VinSolutions) to include pricing in the recap email with the demo link.</p>
   </div>
 
   <div class="section">
-    <h2>Decisions locked on the call</h2>
+    <h2>Items confirmed on the call</h2>
     <div class="card">
       <div class="decision">
-        <div class="decision-icon">💰</div>
-        <div class="decision-text"><strong>$700/mo discounted pricing</strong><span>Month-to-month billing, 30-day cancellation. No long-term contract. No setup fees.</span></div>
+        <div class="decision-icon">1</div>
+        <div class="decision-text"><strong>Pricing</strong><span>$700/month discounted; month-to-month; 30-day cancellation; no setup fees; no long-term contract.</span></div>
       </div>
       <div class="decision">
-        <div class="decision-icon">📬</div>
-        <div class="decision-text"><strong>Recap + demo link to attendees</strong><span>Jeff to send recap with vehicle detail page, demo/role-play link, resources, and pricing.</span></div>
+        <div class="decision-icon">2</div>
+        <div class="decision-text"><strong>Recap materials</strong><span>Jeff to send recap email with vehicle detail page, demo/role-play link, resources, and pricing.</span></div>
       </div>
       <div class="decision">
-        <div class="decision-icon">🔗</div>
-        <div class="decision-text"><strong>Open technical follow-ups</strong><span>Confirm whether the assistant can send direct website vehicle links from the inventory feed; report any constraints.</span></div>
+        <div class="decision-icon">3</div>
+        <div class="decision-text"><strong>Open technical check</strong><span>Confirm whether the assistant can send direct website vehicle links from the inventory feed, and any constraints.</span></div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Feature → benefit (GM lens)</h2>
+    <h2>Feature → what it does (from the demo)</h2>
     <div class="fb-grid">
       <div class="fb-card">
         <div class="f">Agentic multi-topic conversation</div>
-        <div class="b"><em>Benefit:</em> Handles hours, vehicle questions, trade, and appointment in one thread — fewer dropped internet leads waiting on a BDC seat.</div>
+        <div class="b">Handles store hours, vehicle questions, trade interest, and appointment scheduling in one thread.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Primary goal = book the appointment</div>
-        <div class="b"><em>Benefit:</em> Optimizes for showroom traffic (test drive + appraisal), not endless chat that never lands on the calendar.</div>
+        <div class="f">Appointment-focused goal</div>
+        <div class="b">Demo conversation ended with a booked test drive and appraisal on a specific unit and time.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Writes appts, test drives, appraisals into CRM</div>
-        <div class="b"><em>Benefit:</em> Salesperson sees the appointment on the customer record under their name — no dual-system copy/paste from Podium.</div>
+        <div class="f">CRM write-back</div>
+        <div class="b">Creates appointments, test-drive, and appraisal records in VinSolutions under the assigned salesperson.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Inventory-aware answers</div>
-        <div class="b"><em>Benefit:</em> Confirms availability and equipment from the feed so the bot doesn’t invent cars you don’t have.</div>
+        <div class="f">Inventory feed</div>
+        <div class="b">Answers with year/make/model/trim/features and availability from the inventory feed.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Reads last ~20 messages / 30 days</div>
-        <div class="b"><em>Benefit:</em> Continuity after human handoffs — customer doesn’t re-explain the whole story every touch.</div>
+        <div class="f">Conversation context</div>
+        <div class="b">Reads roughly the last 20 messages within 30 days for continuity.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Process include/exclude + cadence buffers</div>
-        <div class="b"><em>Benefit:</em> Turn VCA on for new leads, after-hours, KBB ICO, aging — and keep a human-first window during business hours if you want.</div>
+        <div class="f">Process include / exclude</div>
+        <div class="b">Dealer chooses which CRM processes trigger the assistant (e.g. new leads, KBB ICO, after-hours, aging).</div>
       </div>
       <div class="fb-card">
-        <div class="f">Suppression on recent human contact</div>
-        <div class="b"><em>Benefit:</em> Stops AI pile-on when a rep already texted/called — protects customer experience and CSI.</div>
+        <div class="f">Cadence and buffers</div>
+        <div class="b">Configurable timing (example shown: delayed re-engage; optional human-first window such as 5 minutes during business hours).</div>
       </div>
       <div class="fb-card">
-        <div class="f">Pricing / finance → human task</div>
-        <div class="b"><em>Benefit:</em> Bot does not freestyle deals. Pushback on price creates a salesperson task instead of a bad number in writing.</div>
+        <div class="f">Suppression on human contact</div>
+        <div class="b">Checks suppression events; disengages if a human contacted the consumer within a configured period.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Tone, greeting, differentiator, hours windows</div>
-        <div class="b"><em>Benefit:</em> Brand-safe customization (friendly vs formal, name vs generic, store story) without a custom chatbot project.</div>
+        <div class="f">Pricing / finance handoff</div>
+        <div class="b">Does not complete price negotiation in the demo thread; creates a task for the salesperson and keeps the appointment.</div>
       </div>
       <div class="fb-card">
-        <div class="f">Native VinSolutions surface</div>
-        <div class="b"><em>Benefit:</em> Same login managers already use. Engagement state (“Not engaged” / conversation banner) sits on the customer dashboard.</div>
+        <div class="f">Identity and tone controls</div>
+        <div class="b">Settings shown: greeting by name, tone of voice, store differentiator text, email sign-off, texting time window, site/finance URLs.</div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Podium vs VCA — swap frame</h2>
+    <h2>Podium AI BDC vs VinSolutions VCA (scope only)</h2>
     <table class="compare">
       <thead>
-        <tr><th>Dimension</th><th>Podium (current stack)</th><th>VinSolutions VCA</th></tr>
+        <tr><th>Item</th><th>Podium AI BDC (current)</th><th>VinSolutions VCA (demoed)</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>Home base</td>
-          <td>Separate messaging / reviews platform</td>
-          <td>Inside VinSolutions CRM (Cox)</td>
+          <td>Role under review</td>
+          <td>AI BDC / automated sales messaging follow-up</td>
+          <td>Same role — AI BDC via text and email inside CRM</td>
         </tr>
         <tr>
-          <td>Lead write-back</td>
-          <td>Integration / dual workflow risk</td>
-          <td>Native appts, tasks, notes on the customer</td>
+          <td>System home</td>
+          <td>Podium platform</td>
+          <td>VinSolutions CRM (Cox Automotive)</td>
         </tr>
         <tr>
-          <td>AI style</td>
-          <td>Chat / messaging product with AI features</td>
-          <td>Agentic sales assistant (goal = appointment)</td>
+          <td>Channels shown / stated now</td>
+          <td>Podium AI BDC messaging (as currently used)</td>
+          <td>Text and email</td>
         </tr>
         <tr>
-          <td>Channels now</td>
-          <td>Strong web chat + messaging footprint</td>
-          <td><strong>Text + email now</strong>; web chat &amp; voice later</td>
+          <td>CRM appointments / tasks</td>
+          <td>Depends on current integration setup</td>
+          <td>Demo showed appointments created in CRM by “VCA Virtual Contact Assistant”</td>
         </tr>
         <tr>
-          <td>Reviews / reputation</td>
-          <td>Core Podium strength today</td>
-          <td>Not the point of this product — keep a reviews plan if you cut Podium</td>
+          <td>Website chat tool</td>
+          <td>Separate Podium capability — <strong>not part of this swap</strong></td>
+          <td>Not shipped on this demo; listed on roadmap</td>
         </tr>
         <tr>
-          <td>Quoted cost</td>
-          <td>TBD on BHAG vendor briefs</td>
-          <td><strong>$700/mo</strong> demo price · no setup · 30-day out</td>
+          <td>Review invites / reputation</td>
+          <td>Separate Podium capability — <strong>not part of this swap</strong></td>
+          <td>Not part of VCA as presented</td>
         </tr>
         <tr>
-          <td>Swap implication</td>
-          <td>Keep if you still need reviews + site chat day one</td>
-          <td>Best fit if priority is <strong>CRM-native BDC automation</strong> on internet leads</td>
+          <td>Price stated on demo</td>
+          <td>—</td>
+          <td>$700/mo discounted from $1,000; $0 setup; month-to-month; 30-day out</td>
         </tr>
       </tbody>
     </table>
-    <p class="footnote">Do not rip Podium solely on this demo until: (1) live role-play on a BHAG store process, (2) link-sending confirmed, (3) reviews/chat gap plan written, (4) per-store cost vs current Podium invoice compared in writing.</p>
+    <p class="footnote">This page documents the VCA product demo for the AI BDC function only. Review invites and website chat remain on Podium unless addressed by a separate decision.</p>
   </div>
 
   <div class="section">
-    <h2>Skills the assistant ships with</h2>
+    <h2>Skills listed on the deck</h2>
     <div class="card">
-      <p>From the VinSolutions “Virtual Assistant: Skills” slide in the demo:</p>
+      <p>From the VinSolutions slide “Virtual Assistant: Skills”:</p>
       <ol style="margin:12px 0 0 18px; font-size:13px; color:#333;">
-        <li>Confirm vehicle availability</li>
-        <li>Provide basic vehicle info (Y/M/M, miles, MPG, type, trim, features)</li>
-        <li>Schedule appointments</li>
+        <li>Confirm vehicle availability for customers</li>
+        <li>Provide basic vehicle info (year, make, model, miles, MPG, type, trim, features)</li>
+        <li>Schedule appointments for customers</li>
         <li>Trade-in questions</li>
-        <li>Collect trade-in info &amp; update customer profile</li>
+        <li>Collect trade-in info and update customer profile</li>
         <li>Provide dealership info (hours, address)</li>
-        <li>Get staff involved when needed</li>
-        <li>Remind customers what to bring (DL, title, insurance)</li>
-        <li>Customer sentiment (requires Predictive Insights)</li>
+        <li>Get dealership staff involved when needed</li>
+        <li>Remind customers what to bring for appointments (DL, title, insurance)</li>
+        <li>Determine customer sentiment — requires Predictive Insights</li>
       </ol>
     </div>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/01-skills.jpg" alt="Virtual Assistant skills slide">
-      <figcaption><strong>Skills list</strong>Nine core capabilities — appointment + trade + inventory facts are the operating core for sales internet leads.</figcaption>
+      <figcaption><strong>Skills slide</strong>Nine skills listed by VinSolutions on the demo deck.</figcaption>
     </figure>
   </div>
 
   <div class="section">
-    <h2>You control when it runs</h2>
+    <h2>Process control (when it runs)</h2>
     <div class="card">
-      <p>Processes the dealer can attach VCA to (from the deck): new sales leads, new KBB ICO leads, after-hours leads, after a visit ends, aging leads, schedule appointments &amp; reminders, reschedule missed appointments, cancel appointments, and sold/delivered (service appointment goal — greyscale on slide as future-leaning).</p>
+      <p>Slide titled “Virtual Assistant: You control when it will reach out via processes” listed:</p>
+      <ol style="margin:12px 0 0 18px; font-size:13px; color:#333;">
+        <li>New sales leads</li>
+        <li>New KBB ICO leads</li>
+        <li>New lead received after hours</li>
+        <li>After a visit has ended</li>
+        <li>Aging leads</li>
+        <li>Schedule appointments and send appointment reminders</li>
+        <li>Reschedule missed appointments</li>
+        <li>Cancel existing appointments</li>
+        <li>Sold delivered (goal: set service appointment — shown grey on the slide)</li>
+      </ol>
     </div>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/02-process-control.jpg" alt="Process control slide — when VCA reaches out">
-      <figcaption><strong>Process control</strong>Not an always-on black box — store chooses which CRM processes wake the assistant.</figcaption>
+      <figcaption><strong>Process control slide</strong>Dealer selects which CRM processes trigger outreach.</figcaption>
     </figure>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/04-crm-process-events.jpg" alt="CRM process events Notify Virtual Assistant">
-      <figcaption><strong>CRM process events</strong>“Notify Virtual Assistant” steps on New Internet Sales Lead — immediate engage, 2-hour re-engage, 3-day follow-up — with suppression if actual contact happened in the last N minutes.</figcaption>
+      <figcaption><strong>CRM process events</strong>Example “New Internet Sales Lead” process with “Notify Virtual Assistant” steps (immediate, 2-hour, 3-day). Edit panel shows timing, vehicle type filter, and suppression if actual contact occurred within a set number of minutes.</figcaption>
     </figure>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/03-advanced-settings.jpg" alt="Advanced settings for Virtual Assistant">
-      <figcaption><strong>Advanced settings</strong>Dealer site/finance URLs, texting window (e.g. 8 AM–9 PM), greeting by name, tone of voice, store differentiator copy, email sign-off.</figcaption>
+      <figcaption><strong>Advanced settings</strong>Dealer website and finance URLs; earliest/latest text delivery times; vehicle designation; store differentiator text; greet by name; tone of voice; email sign-off.</figcaption>
     </figure>
   </div>
 
   <div class="section">
-    <h2>Live product walkthrough (screens from the recording)</h2>
+    <h2>Product screens from the recording</h2>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/05-customer-dashboard-vca.jpg" alt="VinSolutions customer dashboard with Vinessa engagement bar">
-      <figcaption><strong>Customer dashboard · Vinessa bar</strong>Engagement state sits on the CRM customer record (“Not engaged” until the assistant is in the thread). Pause Assistant / change history live next to normal CRM actions.</figcaption>
+      <figcaption><strong>Customer dashboard</strong>Vinessa engagement row on the customer record (shown as “Not engaged” before the thread). Controls include Pause Assistant and Change History beside standard CRM actions.</figcaption>
     </figure>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/06-live-conversation-appt.jpg" alt="VCA conversation booking Monday 8am appointment">
-      <figcaption><strong>Conversation → firm appointment</strong>Customer says “Monday morning”; VCA turns it into Monday Jan 26, respects “done by 9 AM,” offers morning slot, books <strong>8:00 AM test drive + appraisal</strong> on the 2026 Honda CR-V EX, and tells them what to bring.</figcaption>
+      <figcaption><strong>Sample conversation — appointment set</strong>Customer said “Monday morning” and needed to be done by 9:00 AM. Assistant confirmed Monday, January 26, offered a morning start, booked 8:00 AM for test drive and appraisal of the 2026 Honda CR-V EX, and listed what to bring (driver’s license and appraisal documents). Sentiment shown as Positive.</figcaption>
     </figure>
     <figure class="shot">
-      <img src="assets/vca-demo-2026-07-28/07-pricing-handoff.jpg" alt="VCA declining to negotiate price and protecting the appointment">
-      <figcaption><strong>Pricing pushback → human lane</strong>Customer wants “out the door at $34,000 before trade.” VCA does not invent a deal — defers numbers to the sales team at the appointment and keeps the booking intact.</figcaption>
+      <img src="assets/vca-demo-2026-07-28/07-pricing-handoff.jpg" alt="VCA responding to out-the-door price request">
+      <figcaption><strong>Sample conversation — pricing request</strong>Customer asked to be “out the door at $34,000 before my trade.” Assistant stated the sales team would discuss pricing and trade appraisal at the 8:00 AM appointment and did not quote a negotiated price in-thread.</figcaption>
     </figure>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/08-crm-appointments-written.jpg" alt="CRM appointments created by VCA Virtual Contact Assistant">
-      <figcaption><strong>CRM write-back proof</strong>Appts tab shows sales appointments created <strong>By: VCA Virtual Contact Assistant</strong>, assigned to named reps, with stock/vehicle description filled in. This is the core Podium-gap closer for BHAG’s Vin stores.</figcaption>
+      <figcaption><strong>CRM appointments tab</strong>Appointments listed with By: <strong>VCA Virtual Contact Assistant</strong>, assigned to named salespeople, with vehicle/stock description filled in (example: in-person test drive and vehicle appraisal for 2026 Honda CR-V EX).</figcaption>
     </figure>
     <figure class="shot">
       <img src="assets/vca-demo-2026-07-28/09-vdp-inventory-context.jpg" alt="Demo VDP for 2026 Honda CR-V EX used in role-play">
-      <figcaption><strong>Inventory / VDP context</strong>Role-play vehicle (demo.roimotors.com 2026 CR-V EX). Attendees asked for this page + conversation link in the recap so the group can self-test the bot.</figcaption>
+      <figcaption><strong>Demo vehicle page</strong>Role-play unit on the demo dealer site (2026 Honda CR-V EX). Attendees requested this page and a conversation link in the recap for hands-on testing.</figcaption>
     </figure>
-    <p class="footnote">Screens captured from the July 28, 2026 CleanShot recording of the VinSolutions demo (ROI Motors Honda demo tenant). Demo customer data is VinSolutions sample data, not BHAG customers.</p>
+    <p class="footnote">Screens from the July 28, 2026 demo recording. Tenant shown is VinSolutions’ ROI Motors Honda demo environment. Customer names and phone numbers on screen are demo data, not Brian Harris AG customers.</p>
   </div>
 
   <div class="section">
-    <h2>Roadmap called on the demo</h2>
+    <h2>Roadmap stated on the demo</h2>
     <div class="card">
       <div class="decision">
-        <div class="decision-icon">🧪</div>
-        <div class="decision-text"><strong>Now — NADA paid pilot</strong><span>Sales + acquisition via text and email.</span></div>
+        <div class="decision-icon">1</div>
+        <div class="decision-text"><strong>Current (NADA paid pilot)</strong><span>Sales and acquisition via text and email.</span></div>
       </div>
       <div class="decision">
-        <div class="decision-icon">🔧</div>
-        <div class="decision-text"><strong>Next — Service arm</strong><span>Text/email for service after sales stack stabilizes.</span></div>
+        <div class="decision-icon">2</div>
+        <div class="decision-text"><strong>Next</strong><span>Service arm (text/email).</span></div>
       </div>
       <div class="decision">
-        <div class="decision-icon">📣</div>
-        <div class="decision-text"><strong>Then — Marketing capabilities</strong><span>Phased after service.</span></div>
+        <div class="decision-icon">3</div>
+        <div class="decision-text"><strong>Then</strong><span>Marketing capabilities (phased after service).</span></div>
       </div>
       <div class="decision">
-        <div class="decision-icon">💬</div>
-        <div class="decision-text"><strong>Later — Web chat + voice</strong><span>Important if site chat is a hard requirement the day Podium is cancelled.</span></div>
+        <div class="decision-icon">4</div>
+        <div class="decision-text"><strong>Later</strong><span>Web chat and voice.</span></div>
       </div>
     </div>
   </div>
 
   <div class="section">
-    <h2>Open actions</h2>
+    <h2>Follow-ups recorded</h2>
     <div class="card">
       <div class="task-row">
         <span class="task-owner owner-vendor">VinSolutions</span>
-        <span class="task-text"><strong>Send recap email + demo / role-play link</strong> — include VDP, conversation link, resources, confirmed $700 pricing (Jeff).</span>
+        <span class="task-text"><strong>Recap email + demo / role-play link</strong> — vehicle detail page, conversation link, resources, pricing (Jeff).</span>
       </div>
       <div class="task-row">
         <span class="task-owner owner-vendor">VinSolutions</span>
-        <span class="task-text"><strong>Validate inventory link-sending</strong> — can VCA drop direct website vehicle URLs in-thread? Report constraints.</span>
+        <span class="task-text"><strong>Inventory link-sending check</strong> — can the assistant include direct website vehicle URLs; report constraints.</span>
       </div>
       <div class="task-row">
-        <span class="task-owner owner-lance">Lance / Coop</span>
-        <span class="task-text"><strong>Run live role-play</strong> when link arrives; pressure-test BHAG processes (new internet, after-hours, KBB ICO, aging).</span>
+        <span class="task-owner owner-store">BHAG</span>
+        <span class="task-text"><strong>Hands-on role-play</strong> when the demo link arrives (processes such as new internet, after-hours, KBB ICO, aging).</span>
       </div>
-      <div class="task-row">
-        <span class="task-owner owner-lance">Lance / Coop</span>
-        <span class="task-text"><strong>Podium total cost of ownership compare</strong> — invoice + reviews/chat gap if VCA is text/email-only at cutover.</span>
-      </div>
-      <div class="task-row">
-        <span class="task-owner owner-store">Store GMs</span>
-        <span class="task-text"><strong>Decide pilot store + process set</strong> — which processes fire VCA first; human-first buffer minutes during business hours.</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Recommendation</h2>
-    <div class="card">
-      <p><strong>Treat VCA as the primary Podium-replacement path for CRM lead handling</strong> on Brian Harris VinSolutions stores — not as a random new SaaS add.</p>
-      <p>Next gate is operational, not conceptual: complete the role-play, confirm link-sending, price-check against current Podium, and write the reviews + website-chat coverage plan for anything VCA does not own yet. If those clear, pilot one store’s internet + after-hours processes before group rollout.</p>
     </div>
   </div>
 
@@ -389,7 +381,7 @@
   <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="Coop" style="filter:brightness(0) invert(1);">
   <div class="footer-text">
     <strong>The Cooperative Agency</strong>
-    Internal vendor brief · noindex · Source: VCA demo recording + meeting summary doc · July 28, 2026
+    Demo notes · noindex · Sources: VinSolutions VCA demo recording + meeting summary · July 28, 2026
   </div>
 </div>
 
