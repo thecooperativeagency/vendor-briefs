@@ -5,115 +5,533 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harris Porsche — GM Brief</title>
-  <style>
-    :root { --coop-dark: #0a0a0a; --coop-red: #c0392b; --coop-light: #f5f5f5; --coop-white: #ffffff; --coop-gray: #666666; --coop-border: #e0e0e0; --brand: #8b0000; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--coop-light); color: var(--coop-dark); font-size: 14px; line-height: 1.6; }
-    .header { background: var(--coop-dark); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; border-bottom: 3px solid var(--coop-red); }
-    .header img { height: 48px; }
-    .header-center { text-align: center; flex: 1; }
-    .header-center strong { color: var(--coop-white); display: block; font-size: 18px; font-weight: 700; }
-    .header-center span { color: #aaa; font-size: 12px; }
-    .header-right { display: flex; align-items: center; justify-content: flex-end; }
-    #theme-toggle { background: rgba(128,128,128,0.15); border: 1px solid rgba(128,128,128,0.3); border-radius: 20px; padding: 6px 12px; font-size: 16px; cursor: pointer; backdrop-filter: blur(6px); transition: background 0.2s, border-color 0.2s; color: inherit; }
-    .store-banner { background: var(--coop-dark); border-bottom: 3px solid var(--brand); color: white; padding: 20px 40px; display: flex; align-items: center; justify-content: space-between; }
-    .store-banner-left h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
-    .store-banner-left p { opacity: 0.7; font-size: 13px; margin-top: 4px; }
-    .store-banner-right { text-align: right; }
-    .store-banner-right strong { display: block; font-size: 18px; font-weight: 700; }
-    .store-banner-right span { opacity: 0.7; font-size: 12px; }
-    .gm-card { background: white; margin: 24px 40px 0; border-radius: 8px; padding: 20px 24px; border-left: 4px solid var(--brand); box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    .gm-card h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--coop-gray); margin-bottom: 8px; }
-    .gm-card .gm-name { font-size: 20px; font-weight: 700; }
-    .gm-card .gm-contacts { margin-top: 8px; display: flex; gap: 20px; flex-wrap: wrap; }
-    .gm-card a { color: var(--brand); text-decoration: none; font-size: 13px; }
-    .section { margin: 24px 40px 0; }
-    .section h2 { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--coop-gray); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--coop-border); }
-    .vendor-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    .vendor-table th { background: var(--coop-dark); color: white; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-    .vendor-table td { padding: 12px 14px; border-bottom: 1px solid var(--coop-border); vertical-align: top; }
-    .vendor-table tr:last-child td { border-bottom: none; }
-    .vendor-table tr:hover td { background: #fafafa; }
-    .vendor-name { font-weight: 600; }
-    .vendor-desc { color: var(--coop-gray); font-size: 12px; margin-top: 2px; }
-    .contact-links { display: flex; flex-direction: column; gap: 4px; }
-    .contact-links a { color: var(--brand); text-decoration: none; font-size: 12px; }
-    .add-contact { display: inline-block; margin-top: 4px; background: var(--coop-dark); color: white !important; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
-    .cost-tbd { color: var(--coop-gray); font-style: italic; }
-    .spend-grid { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    .spend-row { display: flex; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--coop-border); }
-    .spend-row.total { border-bottom: none; background: var(--coop-dark); color: white; font-weight: 700; font-size: 15px; border-radius: 0 0 8px 8px; }
-    .emergency-table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    .emergency-table th { background: var(--coop-red); color: white; padding: 10px 14px; text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .emergency-table td { padding: 12px 14px; border-bottom: 1px solid var(--coop-border); }
-    .emergency-table tr:last-child td { border-bottom: none; }
-    .emergency-table a { color: var(--brand); text-decoration: none; }
-    .footer { margin-top: 40px; background: var(--coop-dark); border-top: 3px solid var(--coop-red); padding: 32px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-    .footer img { height: 36px; opacity: 0.9; }
-    .footer-text { color: #aaa; font-size: 12px; }
-    .footer-text strong { color: white; display: block; margin-bottom: 4px; }
-    .footer-text a { color: var(--coop-red); text-decoration: none; }
-    .footer-credit { color: #555; font-size: 11px; text-align: right; }
-    .footer-credit strong { color: #aaa; display: block; }
+        <style>
+/* vendor-briefs · GM Weekly visual parity · verify: gm-weekly-vendor-skin-v1 */
+:root { --accent: #8b0000; }
+/* GM Weekly visual parity for vendor briefs — light, soft cards, muted tables */
+:root {
+  --accent: #1c69d4;
+  --ink: #111111;
+  --muted: #5b6472;
+  --line: #e5e7eb;
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --good: #0f7b3a;
+  --bad: #b42318;
+  --coop-red: #c0392b;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { color-scheme: light; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.45;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-    /* === THEME VARIABLES === */
-    html { transition: background 0.2s; }
+/* Top chrome = GM Weekly .top */
+.header,
+.top {
+  background: #fff;
+  border-bottom: 3px solid var(--accent);
+  padding: 22px 16px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: none;
+}
+.header img {
+  height: 36px;
+  filter: none !important;
+  opacity: 0.92;
+}
+.header-right {
+  text-align: right;
+  color: var(--muted);
+  font-size: 12px;
+}
+.header-right strong {
+  color: var(--ink);
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+}
 
-    /* Dark mode overrides for light-first vendor briefs */
-    [data-theme="dark"] body { background: #0f0f0f !important; color: #e0e0e0 !important; }
-    [data-theme="dark"] .header { background: #0a0a0a !important; }
-    [data-theme="dark"] .header-center span { color: #888 !important; }
-    [data-theme="dark"] .header-center strong { color: #fff !important; }
-    [data-theme="dark"] .gm-card { background: #1a1a1a !important; border-color: inherit; box-shadow: none !important; color: #e0e0e0 !important; }
-    [data-theme="dark"] .gm-card h2 { color: #888 !important; }
-    [data-theme="dark"] .gm-card .gm-name { color: #fff !important; }
-    [data-theme="dark"] .gm-card a { color: #4a9fd4 !important; }
-    [data-theme="dark"] .section h2 { color: #888 !important; border-bottom-color: #333 !important; }
-    [data-theme="dark"] .vendor-table { background: #1a1a1a !important; box-shadow: none !important; }
-    [data-theme="dark"] .vendor-table th { background: #111 !important; color: #bbb !important; }
-    [data-theme="dark"] .vendor-table td { border-bottom-color: #2a2a2a !important; color: #ccc !important; }
-    [data-theme="dark"] .vendor-table tr:hover td { background: #222 !important; }
-    [data-theme="dark"] .vendor-name { color: #fff !important; }
-    [data-theme="dark"] .vendor-desc { color: #888 !important; }
-    [data-theme="dark"] .contact-links a { color: #4a9fd4 !important; }
-    [data-theme="dark"] .add-contact { background: #333 !important; color: #fff !important; }
-    [data-theme="dark"] .cost { color: #e0e0e0 !important; }
-    [data-theme="dark"] .cost-tbd { color: #888 !important; }
-    [data-theme="dark"] .spend-grid { background: #1a1a1a !important; box-shadow: none !important; }
-    [data-theme="dark"] .spend-row { border-bottom-color: #2a2a2a !important; color: #ccc !important; }
-    [data-theme="dark"] .spend-row:last-child { background: #0a0a0a !important; color: #fff !important; }
-    [data-theme="dark"] .emergency-table { background: #1a1a1a !important; box-shadow: none !important; }
-    [data-theme="dark"] .emergency-table td { border-bottom-color: #2a2a2a !important; color: #ccc !important; }
-    [data-theme="dark"] .emergency-table a { color: #4a9fd4 !important; }
-    [data-theme="dark"] .footer { background: #0a0a0a !important; }
-    [data-theme="dark"] .footer-text { color: #888 !important; }
-    [data-theme="dark"] .footer-text strong { color: #fff !important; }
-    [data-theme="dark"] .footer-credit { color: #555 !important; }
-    [data-theme="dark"] .footer-credit strong { color: #aaa !important; }
-    /* Meeting notes specific */
-    [data-theme="dark"] .content { background: #111 !important; }
-    [data-theme="dark"] .card { background: #1a1a1a !important; box-shadow: none !important; border-color: #2a2a2a !important; }
-    [data-theme="dark"] .card h2 { color: #888 !important; border-bottom-color: #2a2a2a !important; }
-    [data-theme="dark"] .card p, [data-theme="dark"] .card li { color: #ccc !important; }
-    [data-theme="dark"] .card strong { color: #fff !important; }
-    [data-theme="dark"] .back-bar { background: #0a0a0a !important; border-bottom-color: #222 !important; }
-    [data-theme="dark"] .back-bar a { color: #c0392b !important; }
-    [data-theme="dark"] table { background: #1a1a1a !important; }
-    [data-theme="dark"] table th { background: #111 !important; color: #bbb !important; }
-    [data-theme="dark"] table td { border-bottom-color: #2a2a2a !important; color: #ccc !important; }
-    [data-theme="dark"] a { color: #4a9fd4 !important; }
+.store-banner,
+.top-store {
+  background: #fff;
+  color: var(--ink);
+  padding: 8px 16px 22px;
+  border-bottom: 1px solid var(--line);
+  display: block;
+}
+.store-banner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.store-banner-left h1,
+.store-banner h1,
+.top-store h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-top: 4px;
+}
+.store-banner-left p,
+.store-banner p,
+.top-store .sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+  opacity: 1;
+}
+.store-banner-right {
+  text-align: right;
+  color: var(--muted);
+}
+.store-banner-right strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.store-banner-right span {
+  opacity: 1;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.brand-line {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.wrap, .main {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 18px 16px 48px;
+}
+
+/* GM card / prepared-for */
+.gm-card, .meta, .block, .card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  margin: 0 0 14px;
+  box-shadow: none;
+  border-left: 1px solid var(--line);
+}
+.gm-card {
+  margin: 0 0 14px;
+  border-left: 4px solid var(--accent);
+}
+.gm-card h2, .meta-item label, .section > h2 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 800;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.gm-card .gm-name { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+.gm-card .gm-contacts { margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; }
+.gm-card a { color: var(--accent); font-size: 13px; font-weight: 650; }
+
+.section {
+  margin: 0 0 18px;
+  max-width: none;
+}
+.section > h2 {
+  margin: 18px 0 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  border-bottom: none;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+}
+.section > h2::before { content: none; }
+
+/* Tables — GM Weekly light headers */
+.vendor-table, .emergency-table, table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: none;
+  font-size: 13px;
+}
+.vendor-table th, .emergency-table th, table th {
+  background: #fff;
+  color: var(--muted);
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+  border-bottom: 1px solid var(--line);
+}
+.vendor-table td, .emergency-table td, table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f2f5;
+  vertical-align: top;
+  color: var(--ink);
+}
+.vendor-table tr:last-child td, .emergency-table tr:last-child td, table tr:last-child td {
+  border-bottom: none;
+}
+.vendor-table tr:hover td, table tr:hover td { background: #f8fafc; }
+.vendor-name { font-weight: 700; color: var(--ink); }
+.vendor-desc { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.contact-links { display: flex; flex-direction: column; gap: 4px; }
+.contact-links a { color: var(--accent); font-size: 12px; font-weight: 600; }
+.add-contact {
+  display: inline-block;
+  margin-top: 4px;
+  background: #111;
+  color: #fff !important;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+.cost { font-weight: 800; color: var(--ink); }
+.cost-tbd { color: var(--muted); font-style: italic; font-weight: 500; }
+
+.spend-grid {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: none;
+}
+.spend-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f2f5;
+  color: var(--ink);
+}
+.spend-row:last-child,
+.spend-row.total {
+  border-bottom: none;
+  background: #111;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  border-radius: 0;
+}
+.spend-row[style*="background:#f5f5f5"],
+.spend-row[style*="background: #f5f5f5"] {
+  background: #f8fafc !important;
+  color: var(--muted) !important;
+  font-weight: 800 !important;
+  font-size: 11px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Emergency keeps red accent edge, not full red header bar */
+.emergency-table th {
+  background: #fff5f4;
+  color: var(--bad);
+  border-bottom: 1px solid #f0b4ae;
+}
+
+/* Meeting notes extras */
+.back, .back-bar {
+  background: transparent;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.back a, .back-bar a {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.decision {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.decision:last-child { border-bottom: none; }
+.decision-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.decision-text { font-size: 14px; }
+.decision-text strong { display: block; margin-bottom: 2px; font-weight: 800; }
+.decision-text span { color: var(--muted); font-size: 12px; }
+.task-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.task-row:last-child { border-bottom: none; }
+.task-priority, .task-owner {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: #eef1f5;
+  color: #445;
+}
+.p-urgent, .owner-lance { background: #ffd6d3; color: var(--bad); }
+.p-normal, .owner-michael { background: #e8f0fe; color: var(--accent); }
+.owner-jl { background: #d8f3e3; color: var(--good); }
+.owner-store { background: #ffe9b8; color: #9a6700; }
+.task-text { font-size: 13px; line-height: 1.5; }
+.outline-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  color: #3d4654;
+}
+.outline-item:last-child { border-bottom: none; }
+.outline-item strong { color: var(--ink); display: block; margin-bottom: 2px; font-weight: 800; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.pill {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e8f0fe;
+  color: var(--accent);
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.metric-card, .stat {
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: left;
+}
+.metric-card .number, .stat .v {
+  font-size: 26px;
+  font-weight: 850;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+}
+.metric-card .label, .stat .k {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+  margin-top: 4px;
+}
+.meta {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  border-left: 4px solid var(--accent);
+}
+.meta-item strong { font-size: 14px; font-weight: 750; }
+
+/* Footer — soft like GM Weekly */
+.footer, footer {
+  margin-top: 24px;
+  background: transparent;
+  border-top: 1px solid var(--line);
+  padding: 24px 16px 36px;
+  display: block;
+  text-align: center;
+  color: #98a0ad;
+  font-size: 12px;
+}
+.footer img {
+  height: 28px;
+  opacity: 0.85;
+  filter: none !important;
+  margin: 0 auto 10px;
+  display: block;
+}
+.footer-text { color: #98a0ad; font-size: 12px; line-height: 1.55; }
+.footer-text strong { color: var(--ink); display: block; margin-bottom: 4px; font-weight: 800; }
+.footer-text a { color: var(--accent); }
+.footer-credit { color: #98a0ad; font-size: 11px; text-align: center; margin-top: 8px; }
+.footer-credit strong { color: var(--muted); }
+
+/* Hide old dark-mode thrash; force clean light GM Weekly look */
+#theme-toggle { display: none !important; }
+[data-theme="dark"] body,
+[data-theme="dark"] .header,
+[data-theme="dark"] .store-banner,
+[data-theme="dark"] .gm-card,
+[data-theme="dark"] .card,
+[data-theme="dark"] .meta,
+[data-theme="dark"] .block,
+[data-theme="dark"] .vendor-table,
+[data-theme="dark"] .spend-grid,
+[data-theme="dark"] .footer {
+  background: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 6px 0 10px;
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  html, body { overflow-x: hidden; }
+  .header, .store-banner { padding-left: 14px; padding-right: 14px; }
+  .store-banner { flex-direction: column; align-items: flex-start; }
+  .store-banner-right { text-align: left; }
+  .wrap, .main { padding: 14px 12px 40px; }
+  .store-banner-left h1, .store-banner h1 { font-size: 22px; }
+  .gm-card, .section, .footer { margin-left: 0; margin-right: 0; }
+  .header img { height: 30px; }
+}
+
+/* Skin accents set per page via body class or :root --accent override */
+body.skin-bmw { --accent: #1c69d4; }
+body.skin-audi { --accent: #bb0a21; }
+body.skin-porsche { --accent: #8b0000; }
+body.skin-coop { --accent: #c0392b; }
+
+/* Content rail when pages still use bare .gm-card/.section (no .wrap) */
+body > .gm-card,
+body > .section,
+body > .meta,
+.page-main > .gm-card,
+.page-main > .section {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+body > .gm-card,
+.page-main > .gm-card {
+  margin-top: 18px;
+  width: calc(100% - 32px);
+  max-width: 888px; /* 920 - 32 padding visual */
+  padding: 18px;
+}
+body > .section,
+.page-main > .section {
+  width: 100%;
+  max-width: 920px;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+/* unified top: logo strip + title act as one GM Weekly header */
+.header {
+  border-bottom: none;
+  padding-bottom: 8px;
+}
+.store-banner {
+  border-bottom: 3px solid var(--accent);
+  padding-top: 0;
+}
+.store-banner::before {
+  content: "GM vendor brief · Prepared by The Cooperative Agency";
+  display: block;
+  width: 100%;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+body:has(.back) .store-banner::before,
+body:has(.back-bar) .store-banner::before {
+  content: "Meeting summary · Prepared by The Cooperative Agency";
+}
+/* nested cards inside wrap — normal block, no full-bleed hacks */
+.wrap .gm-card,
+.wrap .section,
+.page-main .gm-card,
+.page-main .section {
+  max-width: none;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.wrap .section,
+.page-main .section {
+  padding-left: 0;
+  padding-right: 0;
+}
+.wrap .section > h2,
+.page-main .section > h2 {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* meeting notes back bar inside rail */
+body > .back,
+body > .back-bar {
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+body > .main {
+  /* already has wrap rules */
+}
+/* kill leftover theme toggle markup */
+#theme-toggle { display: none !important; }
+
+
+
   </style>
+
 </head>
-<body>
+<body class="skin-porsche">
 <div class="header">
-  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="filter:brightness(0) invert(1); height:40px;">
-  <div class="header-right"><button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode" aria-label="Toggle theme">🌙</button></div>
+  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="height:36px;">
+  <div class="header-right"></div>
 </div>
 <div class="store-banner">
   <div class="store-banner-left"><h1>Harris Porsche</h1><p>Brian Harris Automotive Group</p></div>
   <div class="store-banner-right"><strong>GM Brief</strong><span>Prepared by The Cooperative Agency · April 2026</span></div>
 </div>
 
+
+<div class="wrap page-main">
 <div class="gm-card">
   <h2>Prepared For</h2>
   <div class="gm-name">Adam Terrebonne</div>
@@ -219,30 +637,11 @@
 </div>
 
 
+</div><!-- /.wrap -->
 <div class="footer">
-  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="filter:brightness(0) invert(1); height:40px;">
+  <img src="https://images.squarespace-cdn.com/content/v1/68fac8a3d20e8d72215ede75/6669040e-00b7-4113-a0c0-a29b3706227f/Asset+26.png?format=200w" alt="The Cooperative Agency" style="height:36px;">
   <div class="footer-text"><strong>The Cooperative Agency</strong>Baton Rouge, Louisiana<br><a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> · <a href="http://www.thecoopbrla.com">thecoopbrla.com</a><br><a href="https://www.instagram.com/cooperativebrla/">@cooperativebrla</a></div>
   <div class="footer-credit"><strong>Lance Faucheux</strong>Marketing Director<br>Vendor summary prepared and maintained<br>by The Cooperative Agency · April 2026</div>
 </div>
-<script>
-(function(){
-  var saved = localStorage.getItem('theme');
-  if(saved) document.documentElement.setAttribute('data-theme', saved);
-  else document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-default-theme') || 'dark');
-})();
-function toggleTheme(){
-  var el = document.documentElement;
-  var cur = el.getAttribute('data-theme');
-  var next = cur === 'dark' ? 'light' : 'dark';
-  el.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  document.getElementById('theme-toggle').textContent = next === 'dark' ? '🌙' : '☀️';
-}
-window.addEventListener('DOMContentLoaded',function(){
-  var t = document.documentElement.getAttribute('data-theme');
-  var btn = document.getElementById('theme-toggle');
-  if(btn) btn.textContent = t === 'dark' ? '🌙' : '☀️';
-});
-</script>
 </body>
 </html>
