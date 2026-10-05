@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audi Baton Rouge — GM Vendor Brief</title>
+  <title>Audi Baton Rouge — Weekly · Oct 5, 2026</title>
   <style>
 /* verify: gm-weekly-vendor-skin-v2 */
 
@@ -290,14 +290,14 @@ table.wide tfoot td:first-child, table.wide tr.total-row td:first-child { backgr
 }
 
 
-/* Audi / audibatonrouge.com skin */
+/* BMW / brianharrisbmw.com skin */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 :root {
   --accent:#BB0A21;
-  --ink:#0a0a0a;
-  --muted:#6b6b6b;
-  --line:#e0e0e0;
-  --bg:#f3f3f3;
+  --ink:#221F1F;
+  --muted:#727171;
+  --line:#EBEBEB;
+  --bg:#F6F6F6;
   --card:#FFFFFF;
   --radius:0px;
   --font:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -305,43 +305,23 @@ table.wide tfoot td:first-child, table.wide tr.total-row td:first-child { backgr
 * { box-sizing:border-box; }
 body { font-family:var(--font); background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased; }
 .top { border-bottom:4px solid var(--accent); }
-.top:not(.has-photo) { background:#0a0a0a; color:#fff; }
-.top:not(.has-photo) .brand { color:rgba(255,255,255,.7); }
-.top:not(.has-photo) h1 { color:#fff; }
-.top:not(.has-photo) .sub { color:rgba(255,255,255,.85); }
-.top.has-photo::before {
-  background:linear-gradient(105deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 48%, rgba(187,10,33,.28) 100%);
-}
-/* Force readable chrome on light main (never inherit white from hero) */
-.page-main .dept-switch a { background:#fff; color:#111; border-color:#c5c9d3; }
-.page-main .dept-switch a.on { background:var(--accent); color:#fff; border-color:var(--accent); }
-.page-main .dept-switch a:hover { color:var(--accent); }
-.page-main .dept-switch a.on:hover { color:#fff; }
-.page-main .period-switch { background:#fff; border:1px solid var(--line); }
-.page-main .period-switch button { background:#fff; color:#111; border-color:#c5c9d3; }
-.page-main .period-switch button.active { background:#0a0a0a; color:#fff; border-color:#0a0a0a; }
-.page-main .period-switch .ps-label,
-.page-main .period-switch .ps-range { color:#666; }
-.page-main .dept-banner { background:#fff; color:#333; }
-.page-main .meta { color:#666; }
-
-.brand { letter-spacing:.14em; font-weight:600; font-size:10px; text-transform:uppercase; }
-h1 { font-weight:700; letter-spacing:-.04em; }
+.top:not(.has-photo) { background:#fff; }
+.brand { letter-spacing:.12em; font-weight:600; font-size:10px; }
+h1 { font-weight:700; letter-spacing:-.03em; }
 .sub { color:var(--muted); }
-.verdict { border-radius:var(--radius); background:#0a0a0a; border-top:3px solid var(--accent); }
+.verdict { border-radius:var(--radius); background:#221F1F; }
 .block, .metric, .stat, .why, .group-block h3, .buckets .b, .col-help div {
   border-radius:var(--radius) !important;
 }
-.block { border-color:var(--line); box-shadow:none; border-top:1px solid var(--line); }
-.funnel-stage { border-radius:var(--radius); background:#0a0a0a; border-left:4px solid var(--accent); }
+.block { border-color:var(--line); box-shadow:none; }
+.funnel-stage { border-radius:var(--radius); background:#221F1F; }
 .stat { background:#fff; border-color:var(--line); }
-.stat .k { letter-spacing:.1em; color:var(--muted); text-transform:uppercase; font-size:10px; }
+.stat .k { letter-spacing:.08em; color:var(--muted); }
 .stat .v { letter-spacing:-.03em; color:var(--ink); }
-.badge { border-radius:0; letter-spacing:.1em; }
-.metric { border-radius:0; }
+.badge { border-radius:0; letter-spacing:.08em; }
 .stage-tabs-wrap {
-  background:rgba(243,243,243,.97);
-  backdrop-filter:saturate(1.05) blur(8px);
+  background:rgba(246,246,246,.96);
+  backdrop-filter:saturate(1.1) blur(8px);
   border-bottom:1px solid var(--line);
   padding:12px 0 0;
 }
@@ -355,31 +335,31 @@ h1 { font-weight:700; letter-spacing:-.04em; }
   padding:12px 14px 10px;
   margin:0;
   font-weight:600;
-  letter-spacing:.03em;
+  letter-spacing:.02em;
 }
 .stage-tabs button .tn {
-  font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:inherit; opacity:.75; margin-bottom:3px;
+  font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:inherit; opacity:.75; margin-bottom:3px;
 }
 .stage-tabs button .tl { font-size:13px; font-weight:700; letter-spacing:-.01em; color:var(--ink); }
 .stage-tabs button:hover { background:#fff; border-color:var(--line); border-bottom-color:transparent; }
 .stage-tabs button.active {
-  background:#0a0a0a;
-  color:#fff;
-  border-color:#0a0a0a;
+  background:#fff;
+  color:var(--ink);
+  border-color:var(--line);
   border-bottom:3px solid var(--accent);
   box-shadow:none;
 }
-.stage-tabs button.active .tn { color:rgba(255,255,255,.7); opacity:1; }
-.stage-tabs button.active .tl { color:#fff; }
+.stage-tabs button.active .tn { color:var(--accent); opacity:1; }
+.stage-tabs button.active .tl { color:var(--ink); }
 .tab-nav-footer button {
-  border-radius:0; border:1px solid var(--line); background:#fff; font-weight:600; letter-spacing:.03em;
+  border-radius:0; border:1px solid var(--line); background:#fff; font-weight:600; letter-spacing:.02em;
 }
-.tab-nav-footer button:hover { border-color:var(--accent); color:var(--accent); background:#fff; }
-.group-block h3 { background:#ececec; border-left:4px solid var(--accent); border-radius:0; }
-th { letter-spacing:.1em; font-weight:600; }
+.tab-nav-footer button:hover { border-color:var(--accent); color:var(--accent); }
+.group-block h3 { background:#F0F2F5; border-left:4px solid var(--accent); border-radius:0; }
+th { letter-spacing:.08em; font-weight:600; }
 table.scoreboard { font-size:12px; min-width:720px; }
 .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; margin:0 -2px; }
-.th-sub { display:block; font-size:9px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:2px; }
+.th-sub { display:block; font-size:9px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-top:2px; }
 .ch-cell { text-align:right; vertical-align:middle; min-width:64px; }
 .ch-cell .ch-n { display:block; font-weight:750; font-variant-numeric:tabular-nums; color:var(--ink); line-height:1.2; }
 .ch-cell .ch-unit { font-weight:600; font-size:10px; color:var(--muted); }
@@ -394,12 +374,10 @@ tr.total-row td .ch-n { font-weight:850; }
   display:inline-block; font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase;
   padding:2px 7px; border-radius:999px; margin-right:6px; vertical-align:middle;
 }
-.dept-pill.dept-new { background:#fde8eb; color:#BB0A21; border:1px solid #f0b4ae; }
+.dept-pill.dept-new { background:#e8f1ff; color:#0b5fff; border:1px solid #b7d0ff; }
 .dept-pill.dept-used { background:#eaf8ef; color:#0f7a3a; border:1px solid #b7e4c7; }
 .people-group h3 { position:sticky; top:52px; z-index:5; }
-.pill-kbb { border-radius:0; }
-.pill-at { border-radius:0; }
-footer { letter-spacing:.06em; text-transform:uppercase; font-size:11px; }
+footer { letter-spacing:.04em; }
 
 
 /* vendor-brief extensions on GM Weekly base · verify: gm-weekly-vendor-skin-v2 */
@@ -498,129 +476,124 @@ footer.vb-foot a { color:var(--accent); }
 <body>
   <div class="top">
     <div class="wrap" style="padding-top:0;padding-bottom:0;">
-      <div class="brand">GM vendor brief · Prepared by The Cooperative Agency</div>
-      <h1>Audi Baton Rouge</h1>
-      <div class="sub">Baton Rouge, Louisiana</div>
+      <div class="brand">Meeting summary · Prepared by The Cooperative Agency</div>
+      <h1>Audi Baton Rouge — Weekly</h1>
+      <div class="sub">October 5, 2026 &nbsp;·&nbsp; Service hours/RO · Q5 diff warranty · VCA settings · Q8/specials · Mastermind eval</div>
     </div>
   </div>
   <div class="wrap page-main">
-    <div class="meta">Single-store GM vendor brief · Audi Baton Rouge · The Cooperative Agency</div>
-    <section class="block">
-      <h2>Prepared for</h2>
-      <div class="gm-name">Hedrick Wood</div>
-      <div class="gm-contacts"><a href="tel:+12259789305">📞 (225) 978-9305</a>
-    <a href="mailto:hedrick.wood@brianharrisaudi.com">✉️ hedrick.wood@brianharrisaudi.com</a></div>
-    </section>
-    <section class="block">
-      <h2>Meeting Notes</h2>
-      <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table class="vendor">
-    <thead><tr><th>Date</th><th>Topic</th><th>Summary</th></tr></thead>
-    <tbody>
-      <tr>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;">Oct 5, 2026</td>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;">Weekly — service hrs/RO, Q5 diff warranty, VCA settings, Q8/specials</td>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;">
-          <a href="meeting-notes/audi-baton-rouge-2026-10-05.html" target="_blank" style="color:#BB0A21;font-weight:600;">View Summary →</a>
-          <div style="font-size:12px;color:#666;margin-top:4px;">CP 2.69→3.0 · F&amp;I $2.6k/copy · VCA Oct 5–6 · free maint 2026 · Mastermind 3-mo eval · OEM diff Oct 27</div>
-        </td>
-      </tr>
+    <div class="back-link"><a href="../audi-baton-rouge.html">← Back to Audi Baton Rouge Vendor Brief</a></div>
+    <div class="note-meta">
+      <div class="mi"><label>Date</label><strong>October 5, 2026</strong></div>
+      <div class="mi"><label>Topic</label><strong>ABR weekly ops — service, warranty, VCA, marketing</strong></div>
+      <div class="mi"><label>Source</label><strong>Plaud · of_435f0809d976d02bc13667dee7cf9988 · ~1h27m</strong></div>
+      <div class="mi"><label>Audience</label><strong>Hedrick / ABR leadership · Lance ops</strong></div>
+    </div>
 
-      <tr>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;">Jul 28, 2026</td>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;">VinSolutions VCA Demo — AI BDC (vs Podium AI BDC)</td>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;">
-          <a href="meeting-notes/brian-harris-ag-2026-07-28-vca-demo.html" target="_blank" style="color:#BB0A21;font-weight:600;">View Summary →</a>
-          <div style="font-size:12px;color:#666;margin-top:4px;">Text/email AI BDC inside VinSolutions. Not review invites or website chat. Podium AI BDC $1,100/mo · VCA $700/mo MTM stated.</div>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;">Apr 22, 2026</td>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;font-size:13px;">AutoHub Demo — Vehicle Acquisition Platform</td>
-        <td style="padding:12px 16px;border-bottom:1px solid #eee;">
-          <a href="meeting-notes/audi-baton-rouge-2026-04-22.html" target="_blank" style="color:#BB0A21;font-weight:600;">View Summary →</a>
-          <div style="font-size:12px;color:#666;margin-top:4px;">Critical for used inventory. No automated tool currently. Recommend Hedrick evaluate.</div>
-        </td>
-      </tr>
-      <tr>
-        <td>April 13, 2026</td>
-        <td>Monday Management Meeting</td>
-        <td><a href="meeting-notes/audi-baton-rouge-2026-04-13.html" target="_blank" style="color:#BB0A21;font-weight:600;">View Summary →</a></td>
-      </tr>
-    </tbody>
-  </table></div>
-</div>
-    </section>
     <section class="block">
-      <h2>Core Systems</h2>
-      <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table class="vendor">
-    <thead><tr><th>Service</th><th>Vendor</th><th>Rep & Contact</th><th>Monthly Cost</th></tr></thead>
-    <tbody>
-      <tr><td><div class="vendor-name">Dealer Management System</div><div class="vendor-desc">Core dealership ops — inventory, accounting, service</div></td><td>CDK Global</td><td><span style="color:#999;font-size:12px">Rep TBD</span></td><td><span class="cost-tbd">TBD</span></td></tr>
-      <tr><td><div class="vendor-name">CRM</div><div class="vendor-desc">Lead management, customer follow-up, sales pipeline</div></td><td>VinSolutions</td><td><div class="contact-links"><strong>Royce Lee</strong><a href="tel:+13099978009">📞 (309) 997-8009</a><a href="vcards/royce-lee.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-      <tr><td><div class="vendor-name">Inventory Management</div><div class="vendor-desc">Trade appraisals, inventory pricing, market analysis</div></td><td>Vauto</td><td><div class="contact-links"><strong>Dwayne Hearl</strong><a href="tel:+18132153632">📞 (813) 215-3632</a><a href="mailto:Dwayne.Hearl@coxautoinc.com">✉️ Dwayne.Hearl@coxautoinc.com</a><a href="vcards/dwayne-hearl.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-    <tr><td><div class="vendor-name">Vehicle History Reports</div><div class="vendor-desc">CARFAX vehicle history, One-Owner badges, Service History integration</div></td><td>CARFAX</td><td><div class="contact-links"><strong>Clay Dugas</strong><a href="tel:+12252666561">📞 (225) 266-6561</a><a href="vcards/clay-dugas.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-    </tbody>
-  </table></div>
-</div>
+      <h2>Working take</h2>
+      <p>ABR weekly covered three pressure points: <strong>service CP hours/RO</strong> (2.69 → target 3.0), a systemic <strong>Q5 differential warranty</strong> mess (OEM visit Oct 27), and <strong>VCA behavior</strong> still not trustworthy for sales (Lance has provider meetings Oct 5–6). Marketing asks are concrete: Q8 price up another $1k, add <strong>3 years free maintenance on all 2026s</strong>, MSRPs on new listings, push executive demos (27 used 2025 Q5/A5). Mastermind (~$5k/mo) goes on a <strong>3-month eval</strong> against Lance’s reporting stack. Used vs service trust conflict is open — no resolution on the call.</p>
+      <div class="pills" style="margin-top:12px;">
+        <span class="pill">CP hrs/RO 2.69 → 3.0 goal</span>
+        <span class="pill">F&amp;I $2,600/copy · 64% finance</span>
+        <span class="pill">VCA settings Oct 5–6</span>
+        <span class="pill">Q5 diff · OEM Oct 27</span>
+        <span class="pill">Q8 +$1k · free maint 2026</span>
+        <span class="pill">Mastermind 3-mo eval</span>
+      </div>
     </section>
+
     <section class="block">
-      <h2>Marketing &amp; Advertising</h2>
-      <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table class="vendor">
-    <thead><tr><th>Service</th><th>Vendor</th><th>Rep & Contact</th><th>Monthly Cost</th></tr></thead>
-    <tbody>
-      <tr><td><div class="vendor-name">Dealership Website</div><div class="vendor-desc">Website platform and hosting</div></td><td>Motive</td><td><div class="contact-links"><strong>Dessrae Edison</strong><a href="tel:+16015502972">📞 (601) 550-2972</a><a href="mailto:dessrae.edison@motivehq.com">✉️ dessrae.edison@motivehq.com</a><a href="vcards/dessrae-edison.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-      <tr><td><div class="vendor-name">Audi OEM Website</div><div class="vendor-desc">Audi franchise-required OEM website — Lance manages both sites</div></td><td>Audi OEM Platform</td><td><div class="contact-links"><strong>Vania Beauchimain</strong><a href="tel:+18025039349">📞 (802) 503-9349</a><a href="vcards/vania-beauchimain.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-      <tr><td><div class="vendor-name">Listings & Marketplace</div><div class="vendor-desc">Vehicle listings on Autotrader and Kelley Blue Book</div></td><td>Autotrader / KBB</td><td><div class="contact-links"><strong>Josh Gwin</strong><a href="tel:+12259541627">📞 (225) 954-1627</a><a href="mailto:josh.gwin@autotrader.com">✉️ josh.gwin@autotrader.com</a><a href="vcards/josh-gwin.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-      <tr><td><div class="vendor-name">AI Chat / BDC / WebChat</div><div class="vendor-desc">Podium stack: AI BDC, website chat, review invites. <strong>VCA demo covers AI BDC only</strong> (<a href="meeting-notes/brian-harris-ag-2026-07-28-vca-demo.html" style="color:#BB0A21;">notes</a>) — not reviews or site chat.</div></td><td>Podium</td><td><div class="contact-links"><strong>Tyler Barnes</strong><a href="tel:+13854856773">📞 (385) 485-6773</a><a href="mailto:tyler.barnes@podium.com">✉️ tyler.barnes@podium.com</a><a href="vcards/tyler-barnes.vcf" class="add-contact">+ Add to Contacts</a></div></td><td><span class="cost">$1,100</span><div style="font-size:11px;color:#666;margin-top:2px;">AI BDC only</div></td></tr>
-      <tr><td><div class="vendor-name">SEM / Google Ads</div><div class="vendor-desc">Paid search advertising managed in-house</div></td><td>The Cooperative Agency</td><td><div class="contact-links"><strong>Lance Faucheux</strong><a href="mailto:lance@thecoopbrla.com">✉️ lance@thecoopbrla.com</a></div></td><td><span class="cost-tbd">TBD</span></td></tr>
-    </tbody>
-  </table></div>
-</div>
+      <h2>Service performance</h2>
+      <ul>
+        <li>Apr–Jul average <strong>2.44 hrs/RO</strong>; last two months <strong>2.69</strong> after lost-opp callbacks + discounts.</li>
+        <li>Target customer-pay: <strong>3.0 hrs/RO</strong>. Close needed work on-site; promote 0% financing on repairs.</li>
+        <li>Warranty claims low vs peer average — possible under-claiming (esp. differential). Better advisor interviews / complaint lines.</li>
+      </ul>
     </section>
+
     <section class="block">
-      <h2>Social Media &amp; Content</h2>
-      <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table class="vendor">
-    <thead><tr><th>Service</th><th>Vendor</th><th>Contact</th><th>Monthly Cost</th></tr></thead>
-    <tbody><tr><td><div class="vendor-name">Social Media Management</div><div class="vendor-desc">Content creation, scheduling, and publishing across all platforms</div></td><td>The Cooperative Agency</td><td><div class="contact-links"><strong>Lance Faucheux</strong><a href="mailto:lance@thecoopbrla.com">✉️ lance@thecoopbrla.com</a></div></td><td>—</td></tr></tbody>
-  </table></div>
-</div>
+      <h2>F&amp;I</h2>
+      <ul>
+        <li>Last month: <strong>$2,600 per copy</strong>, <strong>64%</strong> finance penetration — big step up.</li>
+        <li>Discussion: reintroduce finance fifth on used toward <strong>$3,000/copy</strong> month.</li>
+      </ul>
     </section>
+
     <section class="block">
-      <h2>Monthly Spend Summary</h2>
-      <div class="spend-grid">
-    <div class="spend-row"><span>DMS (CDK Global)</span><span class="cost-tbd">TBD</span></div>
-    <div class="spend-row"><span>CRM (VinSolutions)</span><span class="cost-tbd">TBD</span></div>
-    <div class="spend-row"><span>Inventory (Vauto)</span><span class="cost-tbd">TBD</span></div>
-    <div class="spend-row"><span>Website (Motive)</span><span class="cost-tbd">TBD</span></div>
-    <div class="spend-row"><span>Listings (Autotrader / KBB)</span><span class="cost-tbd">TBD</span></div>
-    <div class="spend-row"><span>AI BDC (Podium)</span><span>$1,100</span></div>
-    <div class="spend-row"><span>SEM / Google Ads</span><span class="cost-tbd">TBD</span></div>
-    <div class="spend-row total"><span>Estimated Monthly Total</span><span>TBD</span></div>
+      <h2>Q5 differential · warranty</h2>
+      <ul>
+        <li>Recurring Q5 diff issue; trades coming in unfixed. Flush ~$600; full replace ~$2,500 often house cost if warranty path fails.</li>
+        <li>One Q5 in service ~<strong>1.5 years</strong>; new module expected, no contingency if it fails.</li>
+        <li>OEM frames as “feel,” needs customer complaint before warranty — blocks proactive fixes.</li>
+        <li><strong>Plan:</strong> Sam &amp; Mark visit <strong>Oct 27</strong>; schedule Terrence on Q5 diff + broader warranty policy.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Used vs service friction</h2>
+      <ul>
+        <li>Used feels jammed by service quotes on trades (TPM sensor price gap vs outside Lincoln; $5–6k quotes on $17–20k cars; $189 to plug in a battery).</li>
+        <li>Trust in internal tech quotes is low; outside shops sometimes preferred. No collaboration plan locked on the call.</li>
+        <li>Diag principle agreed: when diag requires disassembly, roll into repair / credit diag against repair — thresholds still undocumented. UCI checklist to be shared with full transparency.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>VCA / AI BDC (Lance)</h2>
+      <ul>
+        <li>Leadership: current config not clearly helping sales; verbiage weaker; risk of pestering.</li>
+        <li>Hard problems: stops forever when salesperson engages; no clean re-engage after dead deal; pause is minutes not manual; dual phone numbers still a confusion risk.</li>
+        <li>Friday change: stop on salesperson contact (to stop fighting the sale). Need post-inactivity re-follow parameters (Podium-style).</li>
+        <li><strong>Lance:</strong> meetings with provider <strong>today and tomorrow (Oct 5–6)</strong> on pause, re-engage, status/hot-cold controls. Group-wide wait-and-see — cost of waiting is real deals.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Marketing / inventory</h2>
+      <ul>
+        <li><strong>Q8</strong> price up another <strong>$1,000</strong>.</li>
+        <li>Add <strong>3 years free maintenance on all 2026 models</strong> across promotions.</li>
+        <li>Move executive demos: <strong>27</strong> used 2025 Q5s/A5s — dedicated page + ads live; feature large “up to” discount figure.</li>
+        <li>Sales: put <strong>MSRPs on new listings</strong> to show discount vs list.</li>
+        <li>Lance: newsletter + offer email link for review; analyze AI/search ad options and any SEM shift with data.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Reporting / tools</h2>
+      <ul>
+        <li>Managers want customer contact fields on Lance sales reports → “save-a-deal” coaching view — Lance said possible.</li>
+        <li><strong>Mastermind ~$5k/mo</strong>: evaluate cost-effectiveness over <strong>next 3 months</strong> vs Lance tool (criteria not locked).</li>
+        <li>New sales/service app: lead dashboards, manager assign service leads, round-robin, emulate user views; print still 10–12 pages/person — need compact layout / digital logins.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Open actions</h2>
+      <div class="table-scroll" role="region" tabindex="0">
+        <table class="vendor">
+          <thead><tr><th>Owner</th><th>Action</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td>Lance / Coop</td><td>VCA pause, re-engage, status controls with provider</td><td>Oct 5–6</td></tr>
+            <tr><td>Lance / Coop</td><td>Newsletter + offer email link for review; free-maint + Q8/MSRP creative pass</td><td>This week</td></tr>
+            <tr><td>Lance / Coop</td><td>AI/search ad options + SEM recommendation with data</td><td>Follow-up</td></tr>
+            <tr><td>Lance / Coop</td><td>Customer contacts on sales reports (save-a-deal)</td><td>Build when scoped</td></tr>
+            <tr><td>ABR / Lance</td><td>Mastermind 3-month ROI eval criteria</td><td>Next 90 days</td></tr>
+            <tr><td>Service leadership</td><td>Share full UCI checklist; diag credit rules documented</td><td>Soon</td></tr>
+            <tr><td>ABR leadership</td><td>Q5 diff with Sam/Mark; schedule Terrence</td><td>Oct 27 + schedule</td></tr>
+            <tr><td>Sales</td><td>MSRPs on new listings; exec demo “up to” discount treatment</td><td>Ongoing</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Source</h2>
+      <p class="when">Plaud file <code>of_435f0809d976d02bc13667dee7cf9988</code> · start 2026-10-05 ~10:01a CT · duration ~1h27m · filed to plaud-notes dealers/abr.</p>
+    </section>
+
+    <footer style="margin-top:28px;font-size:12px;color:#5b6472;">Internal GM notes · noindex · Cooperative Agency · abr-weekly-2026-10-05-vca-service-q8-v1</footer>
   </div>
-</div>
-    </section>
-    <section class="block">
-      <h2>Vendor Contacts — If Lance Is Unavailable</h2>
-      <p style="font-size:13px;color:#666;margin-bottom:12px;">For any vendor issue, <strong>text Lance Faucheux first</strong> — <a href="sms:+12252765682" style="color:#c0392b;">(225) 276-5682</a>. Do not email — texts get a same-day response, emails may not. The contacts below are direct vendor lines for when Lance is on vacation or unreachable.</p>
-  <div class="table-scroll" role="region" aria-label="Scrollable table" tabindex="0"><table class="vendor">
-    <thead><tr><th>Issue</th><th>Contact Lance First: lance@thecoopbrla.com</th><th>Direct Vendor Contact (Backup)</th></tr></thead>
-    <tbody>
-      <tr><td>Website is down</td><td>Dessrae Edison — Motive</td><td><a href="tel:+16015502972">(601) 550-2972</a></td></tr>
-      <tr><td>CRM not working</td><td>Royce Lee — VinSolutions</td><td><a href="tel:+13099978009">(309) 997-8009</a></td></tr>
-      <tr><td>Chat / AI not responding</td><td>Tyler Barnes — Podium</td><td><a href="tel:+13854856773">(385) 485-6773</a></td></tr>
-      <tr><td>Inventory pricing issues</td><td>Dwayne Hearl — Vauto</td><td><a href="tel:+18132153632">(813) 215-3632</a></td></tr>
-      <tr><td>Autotrader listing issues</td><td>Josh Gwin — Autotrader</td><td><a href="tel:+12259541627">(225) 954-1627</a></td></tr>
-      <tr><td>Social media / content</td><td>Lance Faucheux — The Cooperative Agency</td><td><a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a></td></tr>
-    </tbody>
-  </table></div>
-</div>
-    </section>
-  </div>
-  <footer class="vb-foot">
-    The Cooperative Agency · Baton Rouge, Louisiana<br>
-    <a href="mailto:lance@thecoopbrla.com">lance@thecoopbrla.com</a> ·
-    <a href="http://www.thecoopbrla.com">thecoopbrla.com</a> ·
-    <a href="sms:+12252765682">Text (225) 276-5682</a>
-  </footer>
 </body>
 </html>
